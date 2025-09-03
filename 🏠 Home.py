@@ -124,7 +124,7 @@ with guiuan_tab:
 # Nationwide synopsis
 with nationwide_tab:
     components.html(
-        '<iframe width="100%" height="500" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=5&overlay=satellite&product=satellite&level=surface&lat=14.6&lon=128&pressure=true" frameborder="0"></iframe>',
+        '<iframe width="100%" height="500" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=4&overlay=satellite&product=satellite&level=surface&lat=14.6&lon=125&pressure=true" frameborder="0"></iframe>',
         height=610
         )
     st.write('### Synopsis')
