@@ -88,7 +88,7 @@ with guiuan_tab:
     # Setting up row 1
     wxdata1 = st.container(horizontal=True)
     wxdata1_icon = wxdata1.container(width=50, vertical_alignment='center')
-    wxdata1_icon.image('C:/Users/Brian/Desktop/Icons/temp.png',
+    wxdata1_icon.image('static/temp.png',
                  width=50)
     
     # Temperature
@@ -119,7 +119,7 @@ with guiuan_tab:
     windspeed.metric('Wind speed', '30 km/h')
     winddir = wind.container(horizontal=True, vertical_alignment='center')
     winddir.metric('Wind direction', 'SW')
-    winddir.image('C:/Users/Brian/Desktop/Icons/Wind - 11 (SW).png', width=60)
+    winddir.image('static/Wind - 11 (SW).png', width=60)
 
 # Nationwide synopsis
 with nationwide_tab:
