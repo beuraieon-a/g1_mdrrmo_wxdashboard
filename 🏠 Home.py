@@ -125,7 +125,7 @@ with guiuan_tab:
 with nationwide_tab:
     components.html(
         '<iframe width="100%" height="500" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=4&overlay=satellite&product=satellite&level=surface&lat=14.6&lon=125&pressure=true" frameborder="0"></iframe>',
-        height=610
+        height=510
         )
     st.write('### Synopsis')
 
