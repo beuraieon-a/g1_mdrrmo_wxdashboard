@@ -121,7 +121,7 @@ with weather_tab:
     wahr_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="./g1_mdrrmo_wxdashboard/static/Clear.png" width="145">
+            <img src="app/static/static/hvy rain outlook 2.png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
