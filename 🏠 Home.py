@@ -44,7 +44,7 @@ guiuan_tab, nationwide_tab = st.tabs(['Guiuan', 'Nationwide'])
 # Guiuan synopsis
 with guiuan_tab:
     components.html(
-        '<iframe width="1260" height="600" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=8&overlay=satellite&product=satellite&level=surface&lat=11.1&lon=125.7&pressure=true" frameborder="0"></iframe>',
+        '<iframe width="100%" height="600" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=8&overlay=satellite&product=satellite&level=surface&lat=11.1&lon=125.7&pressure=true" frameborder="0"></iframe>',
         height=610
         )
     components.html(
