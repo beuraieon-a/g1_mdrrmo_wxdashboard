@@ -44,11 +44,11 @@ guiuan_tab, nationwide_tab = st.tabs(['Guiuan', 'Nationwide'])
 # Guiuan synopsis
 with guiuan_tab:
     components.html(
-        '<iframe width="100%" height="600" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=8&overlay=satellite&product=satellite&level=surface&lat=11.1&lon=125.8&pressure=true" frameborder="0"></iframe>',
+        '<iframe width="100%" width="100%" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=8&overlay=satellite&product=satellite&level=surface&lat=11.1&lon=125.7&pressure=true" frameborder="0"></iframe>',
         height=610
         )
     components.html(
-        '<iframe width="1260" height="187" src="https://embed.windy.com/embed.html?type=forecast&location=coordinates&detail=true&detailLat=11.034096325792703&detailLon=125.7222905312513&metricTemp=°C&metricRain=mm&metricWind=km/h" frameborder="0"></iframe>',
+        '<iframe width="100%" height="187" src="https://embed.windy.com/embed.html?type=forecast&location=coordinates&detail=true&detailLat=11.034096325792703&detailLon=125.7222905312513&metricTemp=°C&metricRain=mm&metricWind=km/h" frameborder="0"></iframe>',
         height=197
         )
     st.write('### Weather in Guiuan, Eastern Samar')
