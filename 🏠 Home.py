@@ -63,7 +63,7 @@ with guiuan_tab:
         localwxsynop = st.container(border=True, horizontal_alignment='center')
         
         wxicon = localwxsynop.container(width=95)
-        wxicon.image('C:/Users/Brian/Desktop/Icons/Partly cloudy to cloudy skies with isolated thunderstorms.png',
+        wxicon.image('static/Partly cloudy to cloudy skies with isolated thunderstorms.png',
                      width=90)
         
         localwxsynoptext = localwxsynop.container()    
