@@ -110,7 +110,7 @@ with guiuan_tab:
     # Setting up row 2
     wxdata2 = st.container(horizontal=True)
     wxdata2_icon = wxdata2.container(width=110, vertical_alignment='center')
-    wxdata2_icon.image('C:/Users/Brian/Desktop/Icons/wind.png',
+    wxdata2_icon.image('static/wind.png',
                  width=110)
     
     # Wind
