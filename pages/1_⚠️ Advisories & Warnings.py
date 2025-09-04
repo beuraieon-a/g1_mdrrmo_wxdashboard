@@ -41,6 +41,20 @@ with weather_tab:
     
     # tstm_content = tstm.container(height=200, border=True)
     
+    '''
+    tstm_content.markdown(
+        """
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="app/static/rain warning - 00 (tstm adv).png" width="145">
+        </div>
+        <div style="text-align: center; font-size: small;">
+            as of 10:00 AM 31 August 2025
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+'''
+
     tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
     tstm_content.image("static/rain warning - 00 (tstm adv).png", width=145, caption="as of 10:00 AM 31 August 2025")
 
