@@ -44,7 +44,7 @@ with weather_tab:
     tstm_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/static/rain warning - 00 (tstm adv).png" width="145">
+            <img src="app/static/rain warning - 00 (tstm adv).png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
