@@ -110,9 +110,6 @@ with weather_tab:
             Long-duration intense rainfall ongoing or likely to occur within 2-3 hours. Severe flooding is threatening to occur in areas that are urbanized, low-lying, and/or near rivers or streams. Landslides are likely to occur in hilly or mountainous areas.
             '''
             )
-    
-    # Setting row 2
-    wxrow2 = st.container(horizontal=True, horizontal_alignment='center')
 
     # Weather advisory (Heavy rainfall outlook)
     wahr = wxrow2.container(width=300)
@@ -137,6 +134,9 @@ with weather_tab:
             24-hour (daily) accumulated rainfall of 100-200 millimeters is possible today (September 1) until tomorrow aftenoon (September 2). Numerous flooding events are likely, especially in areas that are urbanized, low-lying, and/or near rivers or streams. Landslide likely in moderate to highly susceptible areas.
             '''
             )
+    
+    # Setting row 2
+    wxrow2 = st.container(horizontal=True, horizontal_alignment='center')
 
     # Marine gale
     gale = wxrow2.container(width=300)
