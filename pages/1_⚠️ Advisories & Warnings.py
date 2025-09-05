@@ -26,6 +26,7 @@ def show_clock():
 show_clock()
 
 st.write('### ⚠️ Advisories & Warnings over Guiuan, Eastern Samar')
+st.write('Note: Available maps of the warning areas and the meanings of the advisory/warning icons can be found below the advisory/warning dashboard.')
 
 # Setting tabs for weather-related and climate-related advisories and warnings
 weather_tab, climate_tab = st.tabs(['Weather', 'Climate'])
