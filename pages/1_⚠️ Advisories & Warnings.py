@@ -53,10 +53,9 @@ with weather_tab:
         unsafe_allow_html=True
     )
 
-    '''
-    tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
-    tstm_content.image("static/rain warning - 00 (tstm adv).png", width=145, caption="as of 10:00 AM 31 August 2025")
-    '''
+    
+    # tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
+    # tstm_content.image("static/rain warning - 00 (tstm adv).png", width=145, caption="as of 10:00 AM 31 August 2025")
 
     with tstm.expander('Details'):
         st.write(
@@ -73,7 +72,7 @@ with weather_tab:
     rain_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Rain_warning_-_01_%28rainfall_advisory%29_icon.png" width="145">
+            <img src="app/static/static/rain warning - 01 (rainfall adv).png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
@@ -126,7 +125,7 @@ with weather_tab:
     wahr_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/static/hvy rain outlook 2.png" width="145">
+            <img src="app/static/hvy rain outlook 2.png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
