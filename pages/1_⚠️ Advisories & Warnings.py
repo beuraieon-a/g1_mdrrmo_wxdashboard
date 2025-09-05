@@ -39,10 +39,22 @@ with weather_tab:
     tstm = wxrow1.container(width=300)
     tstm.write('##### Thunderstorm')
     
-    # tstm_content = tstm.container(height=200, border=True)
+    tstm_content = tstm.container(height=200, border=True)
 
-    tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
-    tstm_content.image("static/rainwarning_00_tstmadv.png", width=145, caption="as of 10:00 AM 31 August 2025")
+    tstm_content.markdown(
+        """
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="app/static/rainwarning_00_tstmadv.png" width="145">
+        </div>
+        <div style="text-align: center; font-size: small;">
+            as of 10:00 AM 31 August 2025
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
+    # tstm_content.image("static/rainwarning_00_tstmadv.png", width=145, caption="as of 10:00 AM 31 August 2025")
 
     with tstm.expander('Details'):
         st.write(
@@ -83,7 +95,7 @@ with weather_tab:
     heavyrainfall_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/rain warning - 03 (orange hrwl).png" width="145">
+            <img src="app/static/rainwarning_03_orangehrwl.png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
@@ -110,7 +122,7 @@ with weather_tab:
     wahr_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/hvy rain outlook 2.png" width="145">
+            <img src="app/static/hvyrainoutlook2.png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
@@ -134,7 +146,7 @@ with weather_tab:
     gale_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/gale warning - beaufort 8-9.png" width="145">
+            <img src="app/static/galewarning_beaufort8-9.png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
@@ -185,7 +197,7 @@ with weather_tab:
     stsurge_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/storm surge warning 2.png" width="145">
+            <img src="app/static/stormsurgewarning2.png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
