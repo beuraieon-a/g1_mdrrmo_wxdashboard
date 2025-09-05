@@ -54,7 +54,6 @@ with weather_tab:
         unsafe_allow_html=True
     )
 
-    
     # tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
     # tstm_content.image("static/rain warning - 00 (tstm adv).png", width=145, caption="as of 10:00 AM 31 August 2025")
 
@@ -97,7 +96,7 @@ with weather_tab:
     heavyrainfall_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Rain_warning_-_03_%28orange_hrwl%29_icon.png" width="145">
+            <img src="app/static/rain warning - 03 (orange hrwl).png" width="145">
         </div>
         <div style="text-align: center; font-size: small;">
             as of 10:00 AM 31 August 2025
@@ -120,8 +119,6 @@ with weather_tab:
     wahr = wxrow2.container(width=300)
     wahr.write('##### Weather advisory')
     wahr_content = wahr.container(height=200, border=True)
-    
-    # wahr_content.image('static/Clear.png')
     
     wahr_content.markdown(
         """
@@ -147,6 +144,18 @@ with weather_tab:
     gale.write('##### Marine gale')
     gale_content = gale.container(height=200, border=True)
     
+    gale_content.markdown(
+        """
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="app/static/gale warning - beaufort 8-9.png" width="145">
+        </div>
+        <div style="text-align: center; font-size: small;">
+            as of 10:00 AM 31 August 2025
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     with gale.expander('Details'):
         st.write(
             '''
@@ -158,20 +167,6 @@ with weather_tab:
     tcws = wxrow2.container(width=300)
     tcws.write('##### Tropical cyclone winds')
     tcws_content = tcws.container (height=200, border=True)
-    
-    tcws_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/TC_Category_-_04_%28TY%29_icon.png" width="70">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/PAGASA_TCWS_2.svg/2048px-PAGASA_TCWS_2.svg.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
     
     with tcws.expander('Details'):
         st.write(
@@ -188,6 +183,18 @@ with weather_tab:
     stsurge.write('##### Storm surge')
     stsurge_content = stsurge.container(height=200, border=True)
     
+    stsurge_content.markdown(
+        """
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="app/static/storm surge warning 2.png" width="145">
+        </div>
+        <div style="text-align: center; font-size: small;">
+            as of 10:00 AM 31 August 2025
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     with stsurge.expander('Details'):
         st.write(
             '''
