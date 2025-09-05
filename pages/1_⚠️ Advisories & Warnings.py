@@ -56,7 +56,7 @@ with weather_tab:
     '''
     tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
     tstm_content.image("static/rain warning - 00 (tstm adv).png", width=145, caption="as of 10:00 AM 31 August 2025")
-    '':
+    '''
 
     with tstm.expander('Details'):
         st.write(
