@@ -65,7 +65,7 @@ with weather_tab:
     
     # Light to moderate rainfall
     rain = wxrow1.container(width=300)
-    rain.write('##### Rainfall')
+    rain.write('##### Light–moderate rainfall')
     rain_content = rain.container(height=200, border=True)
     
     rain_content.markdown(
