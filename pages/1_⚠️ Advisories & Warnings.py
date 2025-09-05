@@ -256,5 +256,13 @@ with climate_tab:
             No dry conditions, dry spells nor drought conditions expected or ongoing.
             '''
             )
+    
+    st.write('### Maps of the advisory/warning areas')
+    
+
+    st.write('##### Legend')
+
+
+    
 
 # End of program
