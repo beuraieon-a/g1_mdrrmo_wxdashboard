@@ -166,7 +166,7 @@ with weather_tab:
     # Tropical cyclone wind signal
     tcws = wxrow2.container(width=300)
     tcws.write('##### Tropical cyclone winds')
-    tcws_content = tcws.container (height=200, border=True)
+    tcws_content = tcws.container(height=200, border=True)
     
     tcws_content.markdown(
         """
