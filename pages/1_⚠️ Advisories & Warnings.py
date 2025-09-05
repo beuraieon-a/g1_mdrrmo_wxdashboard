@@ -112,7 +112,7 @@ with weather_tab:
             )
 
     # Weather advisory (Heavy rainfall outlook)
-    wahr = wxrow2.container(width=300)
+    wahr = wxrow1.container(width=300)
     wahr.write('##### Weather advisory')
     wahr_content = wahr.container(height=200, border=True)
     
