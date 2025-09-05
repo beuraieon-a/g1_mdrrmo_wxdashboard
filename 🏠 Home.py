@@ -63,7 +63,7 @@ with guiuan_tab:
         localwxsynop = st.container(border=True, horizontal_alignment='center')
         
         wxicon = localwxsynop.container(width=95)
-        wxicon.image('static/Partly cloudy to cloudy skies with isolated thunderstorms.png',
+        wxicon.image('static/Partly-cloudy-to-cloudy-skies-with-isolated-thunderstorms.png',
                      width=90)
         
         localwxsynoptext = localwxsynop.container()    
@@ -119,7 +119,7 @@ with guiuan_tab:
     windspeed.metric('Wind speed', '30 km/h')
     winddir = wind.container(horizontal=True, vertical_alignment='center')
     winddir.metric('Wind direction', 'SW')
-    winddir.image('static/Wind - 11 (SW).png', width=60)
+    winddir.image('static/Wind_11_SW.png', width=60)
 
 # Nationwide synopsis
 with nationwide_tab:
