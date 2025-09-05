@@ -188,11 +188,8 @@ with weather_tab:
             '''
             )
 
-    # Setting row 3
-    wxrow3 = st.container(horizontal=True, horizontal_alignment='center')
-
     # Storm surge
-    stsurge = wxrow3.container(width=300)
+    stsurge = wxrow2.container(width=300)
     stsurge.write('##### Storm surge')
     stsurge_content = stsurge.container(height=200, border=True)
     
