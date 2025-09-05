@@ -170,7 +170,7 @@ with weather_tab:
     tcws_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/TCcat_03_STS.png" width="145">
+            <img src="app/static/TCcat_03_STS.png" width="70">
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
             <img src="app/static/tcws2.png" width="145">
         </div>
