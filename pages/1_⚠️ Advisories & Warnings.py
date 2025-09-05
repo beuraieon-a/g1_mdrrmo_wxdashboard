@@ -168,6 +168,18 @@ with weather_tab:
     tcws.write('##### Tropical cyclone winds')
     tcws_content = tcws.container (height=200, border=True)
     
+    tcws_content.markdown(
+        """
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="app/static/tcws2.png" width="145">
+        </div>
+        <div style="text-align: center; font-size: small;">
+            as of 10:00 AM 31 August 2025
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     with tcws.expander('Details'):
         st.write(
             '''
