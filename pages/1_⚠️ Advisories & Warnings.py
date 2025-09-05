@@ -213,6 +213,10 @@ with weather_tab:
             '''
             )
     
+    st.write('### Maps of the advisory/warning areas')
+    
+
+    st.write('##### Legend')
 
 with climate_tab:
     # Setting row 1
