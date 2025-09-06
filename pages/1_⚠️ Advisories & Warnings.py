@@ -218,13 +218,28 @@ with weather_tab:
     # Setting row 1
     maprow1 = st.container(horizontal=True, horizontal_alignment='center')
     
-    # Thunderstorm
+    # Map: Thunderstorm
     map_tstm = maprow1.container(width=600)
     map_tstm.write('##### Thunderstorm')
     
     map_tstm_content = map_tstm.container(border=True)
 
     map_tstm_content.markdown(
+        """
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="app/static/stormsurgewarning2.png" width="600">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Map: Light to moderate rainfall
+    map_rain = maprow1.container(width=600)
+    map_rain.write('##### Light–moderate rainfall')
+    
+    map_rain_content = map_rain.container(border=True)
+
+    map_rain_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
             <img src="app/static/stormsurgewarning2.png" width="600">
