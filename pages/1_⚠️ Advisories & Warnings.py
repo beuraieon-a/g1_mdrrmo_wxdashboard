@@ -214,7 +214,37 @@ with weather_tab:
             )
     
     st.write('### Maps of the advisory/warning areas')
+
+    # Setting row 1
+    maprow1 = st.container(horizontal=True, horizontal_alignment='center')
     
+    # Thunderstorm
+    map_tstm = maprow1.container(width=600)
+    map_tstm.write('##### Thunderstorm')
+    
+    map_tstm_content = tstm.container(border=True)
+
+    map_tstm_content.markdown(
+        """
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="app/static/map_tstm.png" width="550">
+        </div>
+        <div style="text-align: center; font-size: small;">
+            as of 10:00 AM 31 August 2025
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+
+
+
+
+
+
+
+
 
     st.write('##### Legend')
 
