@@ -267,8 +267,16 @@ with weather_tab:
     
     map_stsurge_content = map_stsurge.container(border=True)
     map_stsurge_content.image('static/map_stsurge.jpg')
-    
+
+    # Legend for the advisory/warning icons
     st.write('##### Legend')
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+    
+
+    with col2:
 
 with climate_tab:
     # Setting row 1
