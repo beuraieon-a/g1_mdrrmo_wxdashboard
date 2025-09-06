@@ -227,7 +227,7 @@ with weather_tab:
     map_tstm_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/stormsurgewarning2.png" width="600">
+            <img src="app/static/map_tstm.jpg" width="600">
         </div>
         """,
         unsafe_allow_html=True
@@ -242,7 +242,7 @@ with weather_tab:
     map_rain_content.markdown(
         """
         <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/stormsurgewarning2.png" width="600">
+            <img src="app/static/map_rainadv.jpg" width="600">
         </div>
         """,
         unsafe_allow_html=True
