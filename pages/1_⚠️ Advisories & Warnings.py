@@ -112,7 +112,7 @@ with weather_tab:
             '''
             )
 
-    # Weather advisory (Heavy rainfall outlook)
+    # Weather advisory (3-day heavy rainfall outlook)
     wahr = wxrow1.container(width=300)
     wahr.write('##### Weather advisory')
     wahr_content = wahr.container(height=200, border=True)
@@ -232,7 +232,22 @@ with weather_tab:
     map_rain_content = map_rain.container(border=True)
     map_rain_content.image('static/map_rainadv.jpg')
 
+    # Setting row 2
+    maprow2 = st.container(horizontal=True, horizontal_alignment='center')
+    
+    # Map: Heavy rainfall
+    map_hrw = maprow2.container(width=600)
+    map_hrw.write('##### Heavy rainfall')
+    
+    map_hrw_content = map_hrw.container(border=True)
+    map_hrw_content.image('static/map_hrw.jpg')
 
+    # Map: Weather advisory (3-day heavy rainfall outlook)
+    map_wahr = maprow2.container(width=600)
+    map_wahr.write('##### Weather advisory')
+    
+    map_wahr_content = map_wahr.container(border=True)
+    map_wahr_content.image('static/map_weatheradv1.jpg')
 
 
 
