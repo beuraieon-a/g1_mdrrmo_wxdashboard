@@ -246,7 +246,7 @@ with weather_tab:
     map_wahr = maprow2.container(width=600)
     map_wahr.write('##### Weather advisory')
     
-    map_wahr_content = map_wahr.container(border=True, height=391)
+    map_wahr_content = map_wahr.container(border=True, height=395)
     map_wahr_content.image('static/map_weatheradv1.jpg')
 
 
