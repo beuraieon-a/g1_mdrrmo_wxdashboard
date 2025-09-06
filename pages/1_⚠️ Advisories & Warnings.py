@@ -248,6 +248,8 @@ with weather_tab:
     
     map_wahr_content = map_wahr.container(border=True, height=401)
     map_wahr_content.image('static/map_weatheradv1.jpg')
+    map_wahr_content.image('static/map_weatheradv2.jpg')
+    map_wahr_content.image('static/map_weatheradv3.jpg')
 
 
 
