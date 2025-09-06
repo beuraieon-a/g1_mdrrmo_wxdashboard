@@ -222,16 +222,8 @@ with weather_tab:
     map_tstm = maprow1.container(width=600)
     map_tstm.write('##### Thunderstorm')
     
-    map_tstm_content = map_tstm.container(height=500, border=True)
-
-    map_tstm_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/map_tstm.jpg" width="600">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    map_tstm_content = map_tstm.container(border=True)
+    map_tstm_content.image('app/static/map_tstm.jpg', width=600)
 
     # Map: Light to moderate rainfall
     map_rain = maprow1.container(width=600)
