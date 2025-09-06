@@ -240,7 +240,7 @@ with weather_tab:
     map_hrw.write('##### Heavy rainfall')
     
     map_hrw_content = map_hrw.container(border=True)
-    map_hrw_content.image('static/map_hrw.jpg')
+    map_hrw_content.image('static/map_hrw.png')
 
     # Map: Weather advisory (3-day heavy rainfall outlook)
     map_wahr = maprow2.container(width=600)
