@@ -229,16 +229,9 @@ with weather_tab:
     map_rain = maprow1.container(width=600)
     map_rain.write('##### Light–moderate rainfall')
     
-    map_rain_content = map_rain.container(height=500, border=True)
+    map_rain_content = map_rain.container(border=True)
+    map_rain_content.image('static/map_rainadv.jpg', width=600)
 
-    map_rain_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/map_rainadv.jpg" width="600">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
 
 
 
