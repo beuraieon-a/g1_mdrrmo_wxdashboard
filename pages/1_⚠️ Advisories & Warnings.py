@@ -274,9 +274,12 @@ with weather_tab:
     col1, col2 = st.columns(2)
 
     with col1:
-    
+        legend_tstm = st.container(horizontal=True, horizontal_alignment='left')
+        legend_tstm.write('##### Thunderstorm')
 
-    with col2:
+        legend_tstm_content = legend_tstm.container(border=True)
+        legend_tstm_content_icon = legend_tstm_content.container()
+        legend_tstm_content_icon.image('static/map_tcws.png')
 
 with climate_tab:
     # Setting row 1
