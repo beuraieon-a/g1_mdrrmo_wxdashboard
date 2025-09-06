@@ -222,7 +222,7 @@ with weather_tab:
     map_tstm = maprow1.container(width=600)
     map_tstm.write('##### Thunderstorm')
     
-    map_tstm_content = map_tstm.container(border=True)
+    map_tstm_content = map_tstm.container(height=300, border=True)
 
     map_tstm_content.markdown(
         """
@@ -237,7 +237,7 @@ with weather_tab:
     map_rain = maprow1.container(width=600)
     map_rain.write('##### Light–moderate rainfall')
     
-    map_rain_content = map_rain.container(border=True)
+    map_rain_content = map_rain.container(height=300, border=True)
 
     map_rain_content.markdown(
         """
