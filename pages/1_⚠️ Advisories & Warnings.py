@@ -251,15 +251,23 @@ with weather_tab:
     map_wahr_content.image('static/map_weatheradv2.jpg')
     map_wahr_content.image('static/map_weatheradv3.jpg')
 
+    # Setting row 3
+    maprow3 = st.container(horizontal=True, horizontal_alignment='center')
+    
+    # Map: Tropical cyclone winds
+    map_tcws = maprow3.container(width=600)
+    map_tcws.write('##### Tropical cyclone winds')
+    
+    map_tcws_content = map_tcws.container(border=True)
+    map_tcws_content.image('static/map_tcws.png')
 
-
-
-
-
-
-
-
-
+    # Map: Storm surge
+    map_stsurge = maprow3.container(width=600)
+    map_stsurge.write('##### Storm surge')
+    
+    map_stsurge_content = map_stsurge.container(border=True)
+    map_stsurge_content.image('static/map_stsurge.jpg')
+    
     st.write('##### Legend')
 
 with climate_tab:
