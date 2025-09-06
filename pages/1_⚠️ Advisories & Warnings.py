@@ -223,7 +223,7 @@ with weather_tab:
     map_tstm.write('##### Thunderstorm')
     
     map_tstm_content = map_tstm.container(border=True)
-    map_tstm_content.image('app/static/map_tstm.jpg', width=600)
+    map_tstm_content.image('g1_mdrrmo_wxdashboard/static/map_tstm.jpg', width=600)
 
     # Map: Light to moderate rainfall
     map_rain = maprow1.container(width=600)
