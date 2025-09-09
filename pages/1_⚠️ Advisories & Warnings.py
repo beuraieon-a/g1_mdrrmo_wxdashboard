@@ -283,7 +283,14 @@ with weather_tab:
         legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
         legend_tstm_content_text = legend_tstm_content.container()
-        legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
+        legend_tstm_content_text.write('**Thunderstorm Advisory**')
+        legend_tstm_content_text.write(
+            '''
+            - A nowcasting-type weather warning issued by PAGASA Regional Services Division (PRSD) that indicates the threat of thunderstorm activity in the near-term over specific municipalities/cities or provinces
+            - Generally warns of moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, that are either ongoing or likely to occur within 30 minutes to 1-2 hours
+            - Whenever PAGASA meteorologists assess the thunderstorm to have intensified into a "severe thunderstorm", or if forecats indicate a likelihood of severe thunderstorm activity, this warning is expanded to include severe hazards such as intense to torrential rains, hail, damaging storm-force to typhoon-force winds (esp. when the thunderstorm produces downbursts), and/or tornadoes or waterspouts
+            - Issued at any time whenever necessary (no defined issuance schedule)
+            ''')
 
     with col2:
         legend_tcws = st.container(width = 600)
