@@ -80,7 +80,7 @@ with weather_tab:
 
     # Weather advisory (3-day daily heavy rainfall outlook)
     wahr = wxrow1.container(width=300)
-    wahr.write('##### Daily rainfall outlook')
+    wahr.write('##### Daily heavy rainfall outlook')
     
     wahr_content = wahr.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
 
@@ -106,7 +106,7 @@ with weather_tab:
     gale_content = gale.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
 
     gale_content_icon = gale_content.container(width=150)
-    gale_content_icon.image('static/galewarning_beaufort8-9.png')
+    gale_content_icon.image('static/galewarning_02_veryrough.png')
 
     gale_content_caption = gale_content.container()
     gale_issuance_time = 'as of 10:00 AM 31 August 2025'
@@ -116,7 +116,7 @@ with weather_tab:
     with gale.expander('Details'):
         st.write(
             '''
-            Strong to gale-force winds are prevailing or expected, causing rough to very rough seas. Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor. For larger vessels, operating in these conditions require experience and properly equipped vessels
+            Very rough seas (wave heights of at most 6.0 meters) are expected or ongoing over affected coastal waters due to gale-force winds. Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor. For larger vessels, operating in these conditions require experience and properly equipped vessels.
             '''
             )
     
@@ -201,7 +201,7 @@ with weather_tab:
 
     # Map: Weather advisory (3-day heavy rainfall outlook)
     map_wahr = maprow2.container(width=600)
-    map_wahr.write('##### Weather advisory: Daily rainfall outlook')
+    map_wahr.write('##### Daily heavy rainfall outlook')
     
     map_wahr_content = map_wahr.container(border=True, height=401)
     map_wahr_content.image('static/map_weatheradv1.jpg')
@@ -245,7 +245,7 @@ with weather_tab:
         legend_tstm_content_text.write(
             '''
             Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, ongoing or likely to occur within 30 minutes to 1-2 hours
-            - WARNING: If PAGASA meteorologists assess the thunderstorm to have intensified into a "severe thunderstorm", or if forecasts indicate a likelihood of severe thunderstorm activity, the **Thunderstorm Advisory** can be expanded to include severe hazards such as intense to torrential rains, hail, damaging storm-force to typhoon-force winds (esp. when the thunderstorm produces downbursts), and/or tornadoes or waterspouts
+            - WARNING: If DOST-PAGASA meteorologists assess the thunderstorm to have intensified into a "severe thunderstorm", or if forecasts indicate a likelihood of severe thunderstorm activity, the **Thunderstorm Advisory** can be expanded to include severe hazards such as intense to torrential rains, hail, damaging storm-force to typhoon-force winds (esp. when the thunderstorm produces downbursts), and/or tornadoes or waterspouts
             ''')
         
         # Legend: Long-duration rainfall
@@ -313,8 +313,9 @@ with weather_tab:
         # Legend: Weather advisory (daily rainfall outlook)
 
         legend_wahr = st.container(width = 600)
-        legend_wahr.write('##### Weather advisory: Daily rainfall outlook')
+        legend_wahr.write('##### Daily rainfall outlook')
         legend_wahr_content = legend_wahr.container(border=True)
+        legend_wahr_content.write('##### Weather Advisory')
 
         legend_wahr_content_hr1 = legend_wahr_content.container(horizontal=True, horizontal_alignment='left',
                                                                     vertical_alignment = 'center')
@@ -357,28 +358,58 @@ with weather_tab:
             - Widespread incidents of severe flooding and landslides expected
             ''')
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     with col2:
+        # Legend: Marine gale
+        legend_gale = st.container(width = 600)
+        legend_gale.write('##### Marine gale')
+        legend_gale_content = legend_gale.container(border=True)
+        legend_gale_content.write('##### Gale Warning')
+        legend_gale_content.write('Note: DOST-PAGASA does not apply warning levels in the issuance of Gale Warnings. The following icons and warning levels are only applicable in this dashboard to show the severity of windy and rough sea conditions indicated in the Gale Warning. Here, *coastal waters* refer to sea areas within 30 nautical miles from the coast.')
+
+        legend_gale_content_gale1 = legend_gale_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_gale_content_gale1icon = legend_gale_content_gale1.container(width=100)
+        legend_gale_content_gale1icon.image('static/galewarning_01_rough.png')
+
+        legend_gale_content_gale1text = legend_gale_content_gale1.container()
+        legend_gale_content_gale1text.write(
+            '''
+            Rough seas (wave heights of at most 4.0 meters) expected or ongoing over affected coastal waters due to strong to near gale-force winds
+            - Mariners of small seacrafts (including all motor bancas of any type or tonnage) are advised to take precautionary measures when venturing out to sea and, if possible, avoid navigating in these conditions.
+            '''
+            )
+
+        legend_tcws_content_gale2 = legend_gale_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_gale_content_gale2icon = legend_gale_content_gale2.container(width=100)
+        legend_gale_content_gale2icon.image('static/galewarning_02_veryrough.png')
+
+        legend_gale_content_gale2text = legend_gale_content_gale2.container()
+        legend_gale_content_gale2text.write(
+            '''
+            Very rough seas (wave heights of at most 6.0 meters) expected or ongoing over affected coastal waters due to gale-force winds
+            - Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor.
+            - For larger vessels, operating in these conditions require experience and properly equipped vessels.
+            '''
+            )
+
+        legend_gale_content_gale3 = legend_gale_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_gale_content_gale3icon = legend_gale_content_gale3.container(width=100)
+        legend_gale_content_gale3icon.image('static/galewarning_03_high.png')
+
+        legend_gale_content_gale3text = legend_gale_content_gale3.container()
+        legend_gale_content_gale3text.write(
+            '''
+            High to phenomenal seas (wave heights greater than 6.0 meters) expected or ongoing over affected coastal waters due to severe winds of gale-force or stronger
+            - Sea travel is risky for vessels of any type or tonnage. All mariners must remain in port or, if underway, seek shelter or safe harbor as soon as possible until winds and waves subside.
+            '''
+            )
+
+        # Legend: Tropical cyclone wind signal
         legend_tcws = st.container(width = 600)
         legend_tcws.write('##### Tropical cyclone winds')
         legend_tcws_content = legend_tcws.container(border=True)
