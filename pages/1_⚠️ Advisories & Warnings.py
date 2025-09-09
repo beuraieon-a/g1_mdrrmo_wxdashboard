@@ -364,7 +364,7 @@ with weather_tab:
         legend_gale.write('##### Marine gale')
         legend_gale_content = legend_gale.container(border=True)
         legend_gale_content.write('##### Gale Warning')
-        legend_gale_content.write('Note: DOST-PAGASA does not apply warning levels in the issuance of Gale Warnings. The following icons and warning levels are only applicable in this dashboard to show the severity of windy and rough sea conditions indicated in the Gale Warning. Here, *coastal waters* refer to sea areas within 30 nautical miles from the coast.')
+        legend_gale_content.write('Note: DOST-PAGASA does not apply warning levels in the issuance of Gale Warnings. The following icons and warning levels are only applicable in this dashboard to show the severity of windy and rough sea conditions, based on the maximum forecasted wind speed and wave height indicated in the Gale Warning. Here, *coastal waters* refer to sea areas within 30 nautical miles from the coast.')
 
         legend_gale_content_gale1 = legend_gale_content.container(horizontal=True, horizontal_alignment='left',
                                                                     vertical_alignment = 'center')
@@ -375,7 +375,7 @@ with weather_tab:
         legend_gale_content_gale1text = legend_gale_content_gale1.container()
         legend_gale_content_gale1text.write(
             '''
-            Rough seas (wave heights of at most 4.0 meters) expected or ongoing over affected coastal waters due to strong to near gale-force winds
+            **Rough seas (wave heights of at most 4.0 meters)** expected or ongoing over affected coastal waters due to strong to near gale-force winds
             - Mariners of small seacrafts (including all motor bancas of any type or tonnage) are advised to take precautionary measures when venturing out to sea and, if possible, avoid navigating in these conditions.
             '''
             )
@@ -389,7 +389,7 @@ with weather_tab:
         legend_gale_content_gale2text = legend_gale_content_gale2.container()
         legend_gale_content_gale2text.write(
             '''
-            Very rough seas (wave heights of at most 6.0 meters) expected or ongoing over affected coastal waters due to gale-force winds
+            **Very rough seas (wave heights of at most 6.0 meters)** expected or ongoing over affected coastal waters due to gale-force winds
             - Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor.
             - For larger vessels, operating in these conditions require experience and properly equipped vessels.
             '''
@@ -404,7 +404,7 @@ with weather_tab:
         legend_gale_content_gale3text = legend_gale_content_gale3.container()
         legend_gale_content_gale3text.write(
             '''
-            High to phenomenal seas (wave heights greater than 6.0 meters) expected or ongoing over affected coastal waters due to severe winds of gale-force or stronger
+            **High to phenomenal seas (wave heights greater than 6.0 meters)** expected or ongoing over affected coastal waters due to severe winds of gale-force or stronger
             - Sea travel is risky for vessels of any type or tonnage. All mariners must remain in port or, if underway, seek shelter or safe harbor as soon as possible until winds and waves subside.
             '''
             )
