@@ -100,7 +100,7 @@ with weather_tab:
             )
 
     # Marine gale
-    gale = wxrow2.container(width=300)
+    gale = wxrow1.container(width=300)
     gale.write('##### Marine gale')
     
     gale_content = gale.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
