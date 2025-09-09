@@ -269,20 +269,20 @@ with weather_tab:
     map_stsurge_content.image('static/map_stsurge.jpg')
 
     # Legend for the advisory/warning icons
-    st.write('####### Legend')
+    st.write('### Legend')
 
-    col1, col2 = st.columns(2)
+    legendrow1 = st.container(horizontal=True, horizontal_alignment='center')
 
-    with col1:
-        legend_tstm = st.container(horizontal=True, horizontal_alignment='left')
-        legend_tstm.write('##### Thunderstorm')
-        legend_tstm_content = legend_tstm.container(border=True)
+    # Thunderstorm
+    legend_tstm = legendrow1.container(width=600)
+    legend_tstm.write('##### Thunderstorm')
+    legend_tstm_content = legend_tstm.container(border=True)
 
-        legend_tstm_content_icon = legend_tstm_content.container(width=200)
-        legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
+    legend_tstm_content_icon = legend_tstm_content.container(width=200)
+    legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
-        legend_tstm_content_text = legend_tstm_content.container()
-        legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
+    legend_tstm_content_text = legend_tstm_content.container()
+    legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
 
 with climate_tab:
     # Setting row 1
