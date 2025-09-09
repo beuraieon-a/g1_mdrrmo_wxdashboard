@@ -164,7 +164,7 @@ with weather_tab:
 
     tcws_content_icon = tcws_content.container(horizontal=True)
 
-    tcws_content_icon_tccat = tcws_content_icon.container(width=100)
+    tcws_content_icon_tccat = tcws_content_icon.container(width=50)
     tcws_content_icon_tccat.image('static/TCcat_03_STS.png')
 
     tcws_content_icon_warn = tcws_content_icon.container(width=150)
