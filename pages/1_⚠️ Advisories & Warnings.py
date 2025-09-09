@@ -271,18 +271,29 @@ with weather_tab:
     # Legend for the advisory/warning icons
     st.write('### Legend')
 
-    legendrow1 = st.container(horizontal=True, horizontal_alignment='center')
+    col1, col2 = st.columns(2)
 
-    # Thunderstorm
-    legend_tstm = legendrow1.container(width=600)
-    legend_tstm.write('##### Thunderstorm')
-    legend_tstm_content = legend_tstm.container(border=True)
+    with col1:
+        legend_tstm = st.container(horizontal=True, horizontal_alignment='left')
+        legend_tstm.write('##### Thunderstorm')
+        legend_tstm_content = legend_tstm.container(border=True)
 
-    legend_tstm_content_icon = legend_tstm_content.container(width=200)
-    legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
+        legend_tstm_content_icon = legend_tstm_content.container(width=200)
+        legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
-    legend_tstm_content_text = legend_tstm_content.container()
-    legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
+        legend_tstm_content_text = legend_tstm_content.container()
+        legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
+
+    with col2:
+        legend_tcws = st.container(horizontal=True, horizontal_alignment='left')
+        legend_tcws.write('##### Tropical cyclone winds')
+        legend_tcws_content = legend_tcws.container(border=True)
+
+        legend_tcws_content_icon = legend_tcws_content.container(width=200)
+        legend_tcws_content_icon.image('static/rainwarning_00_tstmadv.png')
+
+        legend_tcws_content_text = legend_tcws_content.container()
+        legend_tcws_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
 
 with climate_tab:
     # Setting row 1
