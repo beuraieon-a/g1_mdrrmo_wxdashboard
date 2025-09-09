@@ -166,7 +166,7 @@ with weather_tab:
     with tcws.expander('Details'):
         st.write(
             '''
-            Gale-force winds are prevailing or expected to occur within 24 hours due to a tropical cyclone, posing minor to moderate threat to life and property.
+            Gale-force to severe gale-force winds are prevailing or expected to occur within 24 hours due to a tropical cyclone, posing minor to moderate threat to life and property.
             '''
             )
 
@@ -293,6 +293,36 @@ with weather_tab:
         legend_tcws_content_tcws2text = legend_tcws_content_tcws2.container()
         legend_tcws_content_tcws2text.write('***Wind Signal No. 2***')
         legend_tcws_content_tcws2text.write('Gale-force to severe gale-force winds prevailing or expected to occur within 24 hours due to a tropical cyclone, posing minor to moderate threat to life and property')
+
+        legend_tcws_content_tcws3 = legend_tcws_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_tcws_content_tcws3icon = legend_tcws_content_tcws3.container(width=100)
+        legend_tcws_content_tcws3icon.image('static/tcws3.png')
+
+        legend_tcws_content_tcws3text = legend_tcws_content_tcws3.container()
+        legend_tcws_content_tcws3text.write('***Wind Signal No. 3***')
+        legend_tcws_content_tcws3text.write('Storm-force to violent storm-force winds prevailing or expected to occur within 18 hours due to a tropical cyclone, posing moderate to significant threat to life and property')
+
+        legend_tcws_content_tcws4 = legend_tcws_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_tcws_content_tcws4icon = legend_tcws_content_tcws4.container(width=100)
+        legend_tcws_content_tcws4icon.image('static/tcws4.png')
+
+        legend_tcws_content_tcws4text = legend_tcws_content_tcws4.container()
+        legend_tcws_content_tcws4text.write('***Wind Signal No. 4***')
+        legend_tcws_content_tcws4text.write('Typhoon-force winds prevailing or expected to occur within 12 hours due to a tropical cyclone, posing significant to severe threat to life and property')
+
+        legend_tcws_content_tcws5 = legend_tcws_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_tcws_content_tcws5icon = legend_tcws_content_tcws5.container(width=100)
+        legend_tcws_content_tcws5icon.image('static/tcws5.png')
+
+        legend_tcws_content_tcws5text = legend_tcws_content_tcws5.container()
+        legend_tcws_content_tcws5text.write('***Wind Signal No. 5***')
+        legend_tcws_content_tcws5text.write('Extreme typhoon-force winds prevailing or expected to occur within 12 hours due to a tropical cyclone, posing extreme/catastrophic threat to life and property')
 
 with climate_tab:
     # Setting row 1
