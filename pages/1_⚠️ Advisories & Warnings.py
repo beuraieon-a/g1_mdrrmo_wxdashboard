@@ -201,7 +201,7 @@ with weather_tab:
 
     # Map: Weather advisory (3-day heavy rainfall outlook)
     map_wahr = maprow2.container(width=600)
-    map_wahr.write('##### Weather advisory: 3-day daily heavy rainfall outlook')
+    map_wahr.write('##### Weather advisory: Daily rainfall outlook')
     
     map_wahr_content = map_wahr.container(border=True, height=401)
     map_wahr_content.image('static/map_weatheradv1.jpg')
@@ -309,6 +309,74 @@ with weather_tab:
             - Serious flooding is expected or ongoing in areas that are urbanized, low-lying, and/or near rivers or streams
             - Landslides are highly likely in hilly or mountainous areas
             ''')
+        
+        # Legend: Weather advisory (daily rainfall outlook)
+
+        legend_wahr = st.container(width = 600)
+        legend_wahr.write('##### Weather advisory: Daily rainfall outlook')
+        legend_wahr_content = legend_wahr.container(border=True)
+
+        legend_wahr_content_hr1 = legend_wahr_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_wahr_content_hr1icon = legend_wahr_content_hr1.container(width=100)
+        legend_wahr_content_hr1icon.image('static/hvyrainoutlook1.png')
+
+        legend_wahr_content_hr1text = legend_wahr_content_hr1.container()
+        legend_wahr_content_hr1text.write(
+            '''
+            24-hour accumulated rainfall of 50-100 millimeters possible within the forecast period
+            - Localized flooding is possible, mainly in areas that are urbanized, low-lying, and/or near rivers or streams
+            - Landslides are possible in highly susceptible areas
+            ''')
+        
+        legend_wahr_content_hr2 = legend_wahr_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_wahr_content_hr2icon = legend_wahr_content_hr3.container(width=100)
+        legend_wahr_content_hr2icon.image('static/hvyrainoutlook2.png')
+
+        legend_wahr_content_hr2text = legend_wahr_content_hr2.container()
+        legend_wahr_content_hr2text.write(
+            '''
+            24-hour accumulated rainfall of 100-200 millimeters possible within the forecast period
+            - Numerous flooding events are likely, especially in areas that are urbanized, low-lying, and/or near rivers or streams
+            - Landslides are likely in moderate to highly susceptible areas
+            ''')
+
+        legend_wahr_content_hr3 = legend_wahr_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_wahr_content_hr3icon = legend_wahr_content_hr3.container(width=100)
+        legend_wahr_content_hr3icon.image('static/hvyrainoutlook3.png')
+
+        legend_wahr_content_hr3text = legend_wahr_content_hr3.container()
+        legend_wahr_content_hr3text.write(
+            '''
+            24-hour accumulated rainfall greater than 200 millimeters possible within the forecast period
+            - Widespread incidents of severe flooding and landslides expected
+            ''')
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     with col2:
         legend_tcws = st.container(width = 600)
