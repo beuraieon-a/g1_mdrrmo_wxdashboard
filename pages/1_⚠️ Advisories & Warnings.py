@@ -159,21 +159,21 @@ with weather_tab:
     # Tropical cyclone wind signal
     tcws = wxrow2.container(width=300)
     tcws.write('##### Tropical cyclone winds')
-    tcws_content = tcws.container(height=200, border=True)
     
-    tcws_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/TCcat_03_STS.png" width="70">
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <img src="app/static/tcws2.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    tcws_content = tcws.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
+
+    tcws_content_icon = tcws_content.container(horizontal=True)
+
+    tcws_content_icon_tccat = tcws_content_icon.container(width=100)
+    tcws_content_icon_tccat.image('static/TCcat_03_STS.png')
+
+    tcws_content_icon_warn = tcws_content_icon.container(width=150)
+    tcws_content_icon_warn.image('static/rainwarning_00_tcwsadv.png')
+
+    tcws_content_caption = tcws_content.container()
+    tcws_issuance_time = 'as of 10:00 AM 31 August 2025'
+    tcws_content_caption.markdown(f"<p style='text-align: center;'><small>{tcws_issuance_time}</small></p>",
+                                  unsafe_allow_html=True)
 
     with tcws.expander('Details'):
         st.write(
