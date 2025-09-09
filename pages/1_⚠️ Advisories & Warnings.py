@@ -276,14 +276,14 @@ with weather_tab:
     with col1:
         legend_tstm = st.container(width = 600)
         legend_tstm.write('##### Thunderstorm')
-        legend_tstm_content = legend_tstm.container(horizontal=True, horizontal_alignment='left',
+        legend_tstm_content = legend_tstm.container(horizontal_alignment='center',
                                                     vertical_alignment = 'center', border=True)
 
-        legend_tstm_content_icon = legend_tstm_content.container(width=100)
+        legend_tstm_content_icon = legend_tstm_content.container(width=200)
         legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
         legend_tstm_content_text = legend_tstm_content.container()
-        legend_tstm_content_text.write('**Thunderstorm Advisory**')
+        legend_tstm_content_text.write('##### Thunderstorm')
         legend_tstm_content_text.write(
             '''
             - A nowcasting-type weather warning issued by PAGASA Regional Services Division (PRSD) that indicates the threat of thunderstorm activity in the near-term over specific municipalities/cities or provinces
