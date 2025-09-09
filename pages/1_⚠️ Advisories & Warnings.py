@@ -260,7 +260,7 @@ with weather_tab:
         legend_rain_content_raicon = legend_rain_content_ra.container(width=100)
         legend_rain_content_raicon.image('static/rainwarning_01_rainfalladvisory.png')
 
-        legend_rain_content_ratext = legend_rain_content.container()
+        legend_rain_content_ratext = legend_rain_content_ra.container()
         legend_rain_content_ratext.write('Long-duration light to moderate rains, with possible isolated heavy downpours, ongoing or likely to occur within 2-3 hours')
 
         legend_rain_content.write('##### Heavy Rainfall Warning')
