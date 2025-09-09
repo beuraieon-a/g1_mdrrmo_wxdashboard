@@ -272,22 +272,22 @@ with weather_tab:
         legend_tcws = st.container(width = 600)
         legend_tcws.write('##### Tropical cyclone winds')
         legend_tcws_content = legend_tcws.container(border=True)
-        legend_tstm_content.write('##### Tropical Cyclone Wind Signals (TCWS)')
+        legend_tcws_content.write('##### Tropical Cyclone Wind Signals (TCWS)')
 
-        legend_tstm_content_tcws1 = legend_tstm_content.container(horizontal=True, horizontal_alignment='left',
+        legend_tcws_content_tcws1 = legend_tcws_content.container(horizontal=True, horizontal_alignment='left',
                                                                     vertical_alignment = 'center')
 
-        legend_tcws_content_tcws1icon = legend_tstm_content_tcws1.container(width=100)
+        legend_tcws_content_tcws1icon = legend_tcws_content_tcws1.container(width=100)
         legend_tcws_content_tcws1icon.image('static/tcws1.png')
 
         legend_tcws_content_tcws1text = legend_tcws_content_tcws1.container()
         legend_tcws_content_tcws1text.write('***Wind Signal No. 1***')
         legend_tcws_content_tcws1text.write('Strong breeze to near gale-force winds prevailing or expected to occur within 36 hours due to a tropical cyclone, posing minimal to minor threat to life and property')
 
-        legend_tstm_content_tcws2 = legend_tstm_content.container(horizontal=True, horizontal_alignment='left',
+        legend_tcws_content_tcws2 = legend_tcws_content.container(horizontal=True, horizontal_alignment='left',
                                                                     vertical_alignment = 'center')
 
-        legend_tcws_content_tcws2icon = legend_tstm_content_tcws2.container(width=100)
+        legend_tcws_content_tcws2icon = legend_tcws_content_tcws2.container(width=100)
         legend_tcws_content_tcws2icon.image('static/tcws2.png')
 
         legend_tcws_content_tcws2text = legend_tcws_content_tcws2.container()
