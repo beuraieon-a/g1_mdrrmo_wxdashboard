@@ -116,7 +116,7 @@ with weather_tab:
     with gale.expander('Details'):
         st.write(
             '''
-            Very rough seas (wave heights of at most 6.0 meters) are expected or ongoing over affected coastal waters due to gale-force winds. Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor. For larger vessels, operating in these conditions require experience and properly equipped vessels.
+            Rough to very rough seas (wave heights of at most 2.5-5.0 meters) are expected or ongoing over affected coastal waters due to gale-force winds. Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor. For larger vessels, operating in these conditions require experience and properly equipped vessels.
             '''
             )
     
