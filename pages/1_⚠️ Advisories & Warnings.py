@@ -46,7 +46,9 @@ with weather_tab:
     tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
     tstm_content_caption = tstm_content.container()
-    tstm_content_caption.write('as of 10:00 AM 31 August 2025')
+    tstm_issuance_time = 'as of 10:00 AM 31 August 2025'
+    tstm_content_caption.markdown(f"<p style='text-align: center;'><small>{tstm_issuance_time}</small></p>",
+                                  unsafe_allow_html=True)
 
     with tstm.expander('Details'):
         st.write(
