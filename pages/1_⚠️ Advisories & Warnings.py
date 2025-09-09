@@ -168,7 +168,7 @@ with weather_tab:
     tcws_content_icon_tccat.image('static/TCcat_03_STS.png')
 
     tcws_content_icon_warn = tcws_content_icon.container(width=150)
-    tcws_content_icon_warn.image('static/rainwarning_00_tcwsadv.png')
+    tcws_content_icon_warn.image('static/tcws2.png')
 
     tcws_content_caption = tcws_content.container()
     tcws_issuance_time = 'as of 10:00 AM 31 August 2025'
