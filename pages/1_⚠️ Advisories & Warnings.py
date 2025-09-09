@@ -271,14 +271,28 @@ with weather_tab:
     with col2:
         legend_tcws = st.container(width = 600)
         legend_tcws.write('##### Tropical cyclone winds')
-        legend_tcws_content = legend_tcws.container(horizontal=True, horizontal_alignment='left',
-                                                    vertical_alignment = 'center', border=True)
+        legend_tcws_content = legend_tcws.container(border=True)
+        legend_tstm_content.write('##### Tropical Cyclone Wind Signals (TCWS)')
 
-        legend_tcws_content_icon = legend_tcws_content.container(width=100)
-        legend_tcws_content_icon.image('static/tcws1.png')
+        legend_tstm_content_tcws1 = legend_tstm_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
 
-        legend_tcws_content_text = legend_tcws_content.container()
-        legend_tcws_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
+        legend_tcws_content_tcws1icon = legend_tstm_content_tcws1.container(width=100)
+        legend_tcws_content_tcws1icon.image('static/tcws1.png')
+
+        legend_tcws_content_tcws1text = legend_tcws_content_tcws1.container()
+        legend_tcws_content_tcws1text.write('***Wind Signal No. 1***')
+        legend_tcws_content_tcws1text.write('Strong breeze to near gale-force winds prevailing or expected to occur within 36 hours due to a tropical cyclone, posing minimal to minor threat to life and property')
+
+        legend_tstm_content_tcws2 = legend_tstm_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_tcws_content_tcws2icon = legend_tstm_content_tcws2.container(width=100)
+        legend_tcws_content_tcws2icon.image('static/tcws2.png')
+
+        legend_tcws_content_tcws2text = legend_tcws_content_tcws2.container()
+        legend_tcws_content_tcws2text.write('***Wind Signal No. 2***')
+        legend_tcws_content_tcws2text.write('Gale-force to severe gale-force winds prevailing or expected to occur within 24 hours due to a tropical cyclone, posing minor to moderate threat to life and property')
 
 with climate_tab:
     # Setting row 1
