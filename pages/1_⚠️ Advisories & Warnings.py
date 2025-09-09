@@ -380,7 +380,7 @@ with weather_tab:
             '''
             )
 
-        legend_tcws_content_gale2 = legend_gale_content.container(horizontal=True, horizontal_alignment='left',
+        legend_gale_content_gale2 = legend_gale_content.container(horizontal=True, horizontal_alignment='left',
                                                                     vertical_alignment = 'center')
 
         legend_gale_content_gale2icon = legend_gale_content_gale2.container(width=100)
