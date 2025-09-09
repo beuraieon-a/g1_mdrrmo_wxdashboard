@@ -60,19 +60,16 @@ with weather_tab:
     # Light to moderate rainfall
     rain = wxrow1.container(width=300)
     rain.write('##### Light–moderate rainfall')
-    rain_content = rain.container(height=200, border=True)
     
-    rain_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/rainwarning_01_rainfalladvisory.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    rain_content = rain.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
+
+    rain_content_icon = rain_content.container(width=150)
+    rain_content_icon.image('static/rainwarning_01_rainfalladvisory.png')
+
+    rain_content_caption = rain_content.container()
+    rain_issuance_time = 'as of 10:00 AM 31 August 2025'
+    rain_content_caption.markdown(f"<p style='text-align: center;'><small>{rain_issuance_time}</small></p>",
+                                  unsafe_allow_html=True)
     
     with rain.expander('Details'):
         st.write(
@@ -84,19 +81,16 @@ with weather_tab:
     # Heavy rainfall
     heavyrainfall = wxrow1.container(width=300)
     heavyrainfall.write('##### Heavy rainfall')
-    heavyrainfall_content = heavyrainfall.container(height=200, border=True)
     
-    heavyrainfall_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/rainwarning_03_orangehrwl.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    heavyrainfall_content = heavyrainfall.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
+
+    heavyrainfall_content_icon = heavyrainfall_content.container(width=150)
+    heavyrainfall_content_icon.image('static/rainwarning_03_orangehrwl.png')
+
+    heavyrainfall_content_caption = heavyrainfall_content.container()
+    heavyrainfall_issuance_time = 'as of 10:00 AM 31 August 2025'
+    heavyrainfall_content_caption.markdown(f"<p style='text-align: center;'><small>{heavyrainfall_issuance_time}</small></p>",
+                                           unsafe_allow_html=True)
     
     with heavyrainfall.expander('Details'):
         st.write(
@@ -108,19 +102,16 @@ with weather_tab:
     # Weather advisory (3-day heavy rainfall outlook)
     wahr = wxrow1.container(width=300)
     wahr.write('##### Weather advisory')
-    wahr_content = wahr.container(height=200, border=True)
     
-    wahr_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/hvyrainoutlook2.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    wahr_content = wahr.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
+
+    wahr_content_icon = wahr_content.container(width=150)
+    wahr_content_icon.image('static/hvyrainoutlook2.png')
+
+    wahr_content_caption = wahr_content.container()
+    wahr_issuance_time = 'as of 10:00 AM 31 August 2025'
+    wahr_content_caption.markdown(f"<p style='text-align: center;'><small>{wahr_issuance_time}</small></p>",
+                                  unsafe_allow_html=True)
     
     with wahr.expander('Details'):
         st.write(
@@ -135,19 +126,16 @@ with weather_tab:
     # Marine gale
     gale = wxrow2.container(width=300)
     gale.write('##### Marine gale')
-    gale_content = gale.container(height=200, border=True)
     
-    gale_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/galewarning_beaufort8-9.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    gale_content = gale.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
+
+    gale_content_icon = gale_content.container(width=150)
+    gale_content_icon.image('static/galewarning_beaufort8-9.png')
+
+    gale_content_caption = gale_content.container()
+    gale_issuance_time = 'as of 10:00 AM 31 August 2025'
+    gale_content_caption.markdown(f"<p style='text-align: center;'><small>{gale_issuance_time}</small></p>",
+                                  unsafe_allow_html=True)
 
     with gale.expander('Details'):
         st.write(
@@ -185,19 +173,16 @@ with weather_tab:
     # Storm surge
     stsurge = wxrow2.container(width=300)
     stsurge.write('##### Storm surge')
-    stsurge_content = stsurge.container(height=200, border=True)
     
-    stsurge_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/stormsurgewarning2.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    stsurge_content = stsurge.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
+
+    stsurge_content_icon = stsurge_content.container(width=150)
+    stsurge_content_icon.image('static/stormsurgewarning2.png')
+
+    stsurge_content_caption = stsurge_content.container()
+    stsurge_issuance_time = 'as of 10:00 AM 31 August 2025'
+    stsurge_content_caption.markdown(f"<p style='text-align: center;'><small>{stsurge_issuance_time}</small></p>",
+                                     unsafe_allow_html=True)
 
     with stsurge.expander('Details'):
         st.write(
