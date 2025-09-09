@@ -358,7 +358,6 @@ with weather_tab:
             - Widespread incidents of severe flooding and landslides expected
             ''')
 
-    with col2:
         # Legend: Marine gale
         legend_gale = st.container(width = 600)
         legend_gale.write('##### Marine gale')
@@ -375,7 +374,7 @@ with weather_tab:
         legend_gale_content_gale1text = legend_gale_content_gale1.container()
         legend_gale_content_gale1text.write(
             '''
-            **Rough seas (wave heights of at most 4.0 meters)** expected or ongoing over affected coastal waters due to strong to near gale-force winds
+            ***Rough seas (wave heights of at most 4.0 meters)*** expected or ongoing over affected coastal waters due to strong to near gale-force winds
             - Mariners of small seacrafts (including all motor bancas of any type or tonnage) are advised to take precautionary measures when venturing out to sea and, if possible, avoid navigating in these conditions.
             '''
             )
@@ -389,7 +388,7 @@ with weather_tab:
         legend_gale_content_gale2text = legend_gale_content_gale2.container()
         legend_gale_content_gale2text.write(
             '''
-            **Very rough seas (wave heights of at most 6.0 meters)** expected or ongoing over affected coastal waters due to gale-force winds
+            ***Very rough seas (wave heights of at most 6.0 meters)*** expected or ongoing over affected coastal waters due to gale-force winds
             - Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor.
             - For larger vessels, operating in these conditions require experience and properly equipped vessels.
             '''
@@ -404,11 +403,12 @@ with weather_tab:
         legend_gale_content_gale3text = legend_gale_content_gale3.container()
         legend_gale_content_gale3text.write(
             '''
-            **High to phenomenal seas (wave heights greater than 6.0 meters)** expected or ongoing over affected coastal waters due to severe winds of gale-force or stronger
+            ***High to phenomenal seas (wave heights greater than 6.0 meters)*** expected or ongoing over affected coastal waters due to severe winds of gale-force or stronger
             - Sea travel is risky for vessels of any type or tonnage. All mariners must remain in port or, if underway, seek shelter or safe harbor as soon as possible until winds and waves subside.
             '''
             )
 
+    with col2:
         # Legend: Tropical cyclone wind signal
         legend_tcws = st.container(width = 600)
         legend_tcws.write('##### Tropical cyclone winds')
@@ -464,6 +464,56 @@ with weather_tab:
         legend_tcws_content_tcws5text = legend_tcws_content_tcws5.container()
         legend_tcws_content_tcws5text.write('***Wind Signal No. 5***')
         legend_tcws_content_tcws5text.write('Extreme typhoon-force winds prevailing or expected to occur within 12 hours due to a tropical cyclone, posing extreme/catastrophic threat to life and property')
+
+        # Legend: Storm surge
+        legend_stsurge = st.container(width = 600)
+        legend_stsurge.write('##### Storm surge')
+        legend_stsurge_content = legend_stsurge.container(border=True)
+        legend_stsurge_content.write('##### Storm Surge Warning')
+        
+        legend_stsurge_content_stsurge1 = legend_stsurge_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_stsurge_content_stsurge1icon = legend_stsurge_content_stsurge1.container(width=100)
+        legend_stsurge_content_stsurge1icon.image('static/stormsurgewarning1.png')
+
+        legend_stsurge_content_stsurge1text = legend_stsurge_content_stsurge1.container()
+        legend_stsurge_content_stsurge1text.write(
+            '''
+            ***Storm surge reaching 1.0-2.0 meters*** expected or ongoing over affected coastal areas due to a tropical cyclone
+            - Minimal to moderate damage to communities and coastal/marine infrastructures
+            '''
+            )
+
+        legend_stsurge_content_stsurge2 = legend_stsurge_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_stsurge_content_stsurge2icon = legend_stsurge_content_stsurge2.container(width=100)
+        legend_stsurge_content_stsurge2icon.image('static/stormsurgewarning2.png')
+
+        legend_stsurge_content_stsurge2text = legend_stsurge_content_stsurge2.container()
+        legend_stsurge_content_stsurge2text.write(
+            '''
+            ***Storm surge reaching 2.1-3.0 meters*** expected or ongoing over affected coastal areas due to a tropical cyclone
+            - Moderate to significant damage to communities and coastal/marine infrastructures, along with significant coastal erosion
+            - Riverine flooding due to forced/induced upstream flow by the storm surge is also likely
+            '''
+            )
+
+        legend_stsurge_content_stsurge3 = legend_stsurge_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_stsurge_content_stsurge3icon = legend_stsurge_content_stsurge3.container(width=100)
+        legend_stsurge_content_stsurge3icon.image('static/stormsurgewarning3.png')
+
+        legend_stsurge_content_stsurge3text = legend_stsurge_content_stsurge3.container()
+        legend_stsurge_content_stsurge3text.write(
+            '''
+            ***Storm surge greater than 3.0 meters*** expected or ongoing over affected coastal areas due to a tropical cyclone
+            - Catastrophic, extensive and life-threatening coastal inundation as seawater surges inland
+            - Extreme damage to communities and coastal/marine infrastructures, along with significant coastal erosion and riverine flooding due to forced/induced upstream flow
+            '''
+            )
 
 with climate_tab:
     # Setting row 1
