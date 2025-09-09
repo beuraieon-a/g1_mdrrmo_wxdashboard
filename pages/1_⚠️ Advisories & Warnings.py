@@ -282,7 +282,7 @@ with weather_tab:
         legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
         legend_tstm_content_text = legend_tstm_content.container()
-        legend_tstm_content_text.write()
+        legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
 
 with climate_tab:
     # Setting row 1
