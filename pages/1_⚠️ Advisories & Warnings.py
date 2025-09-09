@@ -254,20 +254,18 @@ with weather_tab:
     with col1:
         legend_tstm = st.container(width = 600)
         legend_tstm.write('##### Thunderstorm')
-        legend_tstm_content = legend_tstm.container(horizontal_alignment='center',
+        legend_tstm_content = legend_tstm.container(horizontal=True, horizontal_alignment='center',
                                                     vertical_alignment = 'center', border=True)
 
-        legend_tstm_content_icon = legend_tstm_content.container(width=200)
+        legend_tstm_content_icon = legend_tstm_content.container(width=100)
         legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
         legend_tstm_content_text = legend_tstm_content.container()
         legend_tstm_content_text.write('##### Thunderstorm Advisory')
         legend_tstm_content_text.write(
             '''
-            - A nowcasting-type weather warning issued by a PAGASA Regional Services Division (PRSD) that indicates the threat of thunderstorm activity in the near-term over specific municipalities/cities or provinces
-            - Generally warns of moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, that are either ongoing or likely to occur within 30 minutes to 1-2 hours
-            - Whenever PAGASA meteorologists assess the thunderstorm to have intensified into a "severe thunderstorm", or if forecats indicate a likelihood of severe thunderstorm activity, this warning is expanded to include severe hazards such as intense to torrential rains, hail, damaging storm-force to typhoon-force winds (esp. when the thunderstorm produces downbursts), and/or tornadoes or waterspouts
-            - Issued at any time whenever necessary (no defined issuance schedule)
+            Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, ongoing or likely to occur within 30 minutes to 1-2 hours
+            - WARNING: If PAGASA meteorologists assess the thunderstorm to have intensified into a "severe thunderstorm", or if forecasts indicate a likelihood of severe thunderstorm activity, the **Thunderstorm Advisory** can be expanded to include severe hazards such as intense to torrential rains, hail, damaging storm-force to typhoon-force winds (esp. when the thunderstorm produces downbursts), and/or tornadoes or waterspouts
             ''')
 
     with col2:
