@@ -40,22 +40,11 @@ with weather_tab:
     tstm = wxrow1.container(width=300)
     tstm.write('##### Thunderstorm')
     
-    tstm_content = tstm.container(height=200, border=True)
+    tstm_content = tstm.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
 
-    tstm_content.markdown(
-        """
-        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-            <img src="app/static/rainwarning_00_tstmadv.png" width="145">
-        </div>
-        <div style="text-align: center; font-size: small;">
-            as of 10:00 AM 31 August 2025
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    # tstm_content = tstm.container(height=200, border=True, horizontal_alignment="center")
-    # tstm_content.image("static/rainwarning_00_tstmadv.png", width=145, caption="as of 10:00 AM 31 August 2025")
+    tstm_content_icon = tstm_content.container(width=200)
+    tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
+    tstm_content_icon.caption('as of 10:00 AM 31 August 2025')
 
     with tstm.expander('Details'):
         st.write(
@@ -276,7 +265,7 @@ with weather_tab:
     with col1:
         legend_tstm = st.container(width = 600)
         legend_tstm.write('##### Thunderstorm Advisory')
-        legend_tstm_content = legend_tstm.container(horizontal_alignment='left',
+        legend_tstm_content = legend_tstm.container(horizontal_alignment='center',
                                                     vertical_alignment = 'center', border=True)
 
         legend_tstm_content_icon = legend_tstm_content.container(width=200)
