@@ -42,7 +42,7 @@ with weather_tab:
     
     tstm_content = tstm.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
 
-    tstm_content_icon = tstm_content.container(width=200)
+    tstm_content_icon = tstm_content.container(width=150)
     tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
     tstm_content_icon.caption('as of 10:00 AM 31 August 2025')
 
