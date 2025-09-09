@@ -325,7 +325,7 @@ with weather_tab:
         legend_wahr_content_hr1text = legend_wahr_content_hr1.container()
         legend_wahr_content_hr1text.write(
             '''
-            24-hour accumulated rainfall of 50-100 millimeters possible within the forecast period
+            ***24-hour accumulated rainfall of 50-100 millimeters*** possible within the forecast period
             - Localized flooding is possible, mainly in areas that are urbanized, low-lying, and/or near rivers or streams
             - Landslides are possible in highly susceptible areas
             ''')
@@ -333,13 +333,13 @@ with weather_tab:
         legend_wahr_content_hr2 = legend_wahr_content.container(horizontal=True, horizontal_alignment='left',
                                                                     vertical_alignment = 'center')
 
-        legend_wahr_content_hr2icon = legend_wahr_content_hr3.container(width=100)
+        legend_wahr_content_hr2icon = legend_wahr_content_hr2.container(width=100)
         legend_wahr_content_hr2icon.image('static/hvyrainoutlook2.png')
 
         legend_wahr_content_hr2text = legend_wahr_content_hr2.container()
         legend_wahr_content_hr2text.write(
             '''
-            24-hour accumulated rainfall of 100-200 millimeters possible within the forecast period
+            ***24-hour accumulated rainfall of 100-200 millimeters*** possible within the forecast period
             - Numerous flooding events are likely, especially in areas that are urbanized, low-lying, and/or near rivers or streams
             - Landslides are likely in moderate to highly susceptible areas
             ''')
@@ -353,7 +353,7 @@ with weather_tab:
         legend_wahr_content_hr3text = legend_wahr_content_hr3.container()
         legend_wahr_content_hr3text.write(
             '''
-            24-hour accumulated rainfall greater than 200 millimeters possible within the forecast period
+            ***24-hour accumulated rainfall greater than 200 millimeters*** possible within the forecast period
             - Widespread incidents of severe flooding and landslides expected
             ''')
 
