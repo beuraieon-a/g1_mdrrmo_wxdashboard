@@ -57,14 +57,14 @@ with weather_tab:
             '''
             )
     
-    # Light to moderate rainfall
+    # Long-duration rainfall (includes Rainfall Advisory and Heavy Rainfall Warning)
     rain = wxrow1.container(width=300)
-    rain.write('##### Light–moderate rainfall')
+    rain.write('##### Long-duration rainfall')
     
     rain_content = rain.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
 
     rain_content_icon = rain_content.container(width=150)
-    rain_content_icon.image('static/rainwarning_01_rainfalladvisory.png')
+    rain_content_icon.image('static/rainwarning_03_orangehrwl.png')
 
     rain_content_caption = rain_content.container()
     rain_issuance_time = 'as of 10:00 AM 31 August 2025'
@@ -74,28 +74,7 @@ with weather_tab:
     with rain.expander('Details'):
         st.write(
             '''
-            Long-duration light to moderate rains with possible isolated heavy downpours are ongoing or likely to occur within 2-3 hours.
-            '''
-            )
-    
-    # Heavy rainfall
-    heavyrainfall = wxrow1.container(width=300)
-    heavyrainfall.write('##### Heavy rainfall')
-    
-    heavyrainfall_content = heavyrainfall.container(horizontal_alignment='center', vertical_alignment = 'center', border=True)
-
-    heavyrainfall_content_icon = heavyrainfall_content.container(width=150)
-    heavyrainfall_content_icon.image('static/rainwarning_03_orangehrwl.png')
-
-    heavyrainfall_content_caption = heavyrainfall_content.container()
-    heavyrainfall_issuance_time = 'as of 10:00 AM 31 August 2025'
-    heavyrainfall_content_caption.markdown(f"<p style='text-align: center;'><small>{heavyrainfall_issuance_time}</small></p>",
-                                           unsafe_allow_html=True)
-    
-    with heavyrainfall.expander('Details'):
-        st.write(
-            '''
-            Long-duration intense rainfall ongoing or likely to occur within 2-3 hours. Severe flooding is threatening to occur in areas that are urbanized, low-lying, and/or near rivers or streams. Landslides are likely to occur in hilly or mountainous areas.
+            Long-duration intense rainfall is ongoing or likely to occur within 2-3 hours. Flooding is threatening, or severe flooding is about to occur, in areas that are urbanized, low-lying, and/or near rivers or streams. Landslides are likely to occur in hilly or mountainous areas.
             '''
             )
 
@@ -119,9 +98,6 @@ with weather_tab:
             24-hour (daily) accumulated rainfall of 100-200 millimeters is possible today (September 1) until tomorrow aftenoon (September 2). Numerous flooding events are likely, especially in areas that are urbanized, low-lying, and/or near rivers or streams. Landslide likely in moderate to highly susceptible areas.
             '''
             )
-    
-    # Setting row 2
-    wxrow2 = st.container(horizontal=True, horizontal_alignment='center')
 
     # Marine gale
     gale = wxrow2.container(width=300)
@@ -143,6 +119,9 @@ with weather_tab:
             Strong to gale-force winds are prevailing or expected, causing rough to very rough seas. Sea travel is risky for small seacrafts (including all motor bancas of any type or tonnage). Mariners of these vessels are advised to remain in port or seek safe harbor. For larger vessels, operating in these conditions require experience and properly equipped vessels
             '''
             )
+    
+    # Setting row 2
+    wxrow2 = st.container(horizontal=True, horizontal_alignment='center')
 
     # Tropical cyclone wind signal
     tcws = wxrow2.container(width=300)
@@ -252,9 +231,10 @@ with weather_tab:
     col1, col2 = st.columns(2)
 
     with col1:
+        # Legend: Thunderstorm Advisory
         legend_tstm = st.container(width = 600)
         legend_tstm.write('##### Thunderstorm')
-        legend_tstm_content = legend_tstm.container(horizontal=True, horizontal_alignment='center',
+        legend_tstm_content = legend_tstm.container(horizontal=True, horizontal_alignment='left',
                                                     vertical_alignment = 'center', border=True)
 
         legend_tstm_content_icon = legend_tstm_content.container(width=100)
@@ -266,6 +246,68 @@ with weather_tab:
             '''
             Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, ongoing or likely to occur within 30 minutes to 1-2 hours
             - WARNING: If PAGASA meteorologists assess the thunderstorm to have intensified into a "severe thunderstorm", or if forecasts indicate a likelihood of severe thunderstorm activity, the **Thunderstorm Advisory** can be expanded to include severe hazards such as intense to torrential rains, hail, damaging storm-force to typhoon-force winds (esp. when the thunderstorm produces downbursts), and/or tornadoes or waterspouts
+            ''')
+        
+        # Legend: Long-duration rainfall
+
+        legend_rain = st.container(width = 600)
+        legend_rain.write('##### Long-duration rainfall')
+        legend_rain_content = legend_rain.container(border=True)
+        legend_rain_content.write('##### Rainfall Advisory')
+
+        legend_rain_content_ra = legend_rain_content.container(horizontal=True, horizontal_alignment='left',
+                                                                vertical_alignment = 'center')
+        legend_rain_content_raicon = legend_rain_content_ra.container(width=100)
+        legend_rain_content_raicon.image('static/rainwarning_01_rainfalladvisory.png')
+
+        legend_rain_content_ratext = legend_rain_content.container()
+        legend_rain_content_ratext.write('Long-duration light to moderate rains, with possible isolated heavy downpours, ongoing or likely to occur within 2-3 hours')
+
+        legend_rain_content.write('##### Heavy Rainfall Warning')
+
+        legend_rain_content_hrw1 = legend_rain_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_rain_content_hrw1icon = legend_rain_content_hrw1.container(width=100)
+        legend_rain_content_hrw1icon.image('static/rainwarning_02_yellowhrwl.png')
+
+        legend_rain_content_hrw1text = legend_rain_content_hrw1.container()
+        legend_rain_content_hrw1text.write('***Yellow Warning Level***')
+        legend_rain_content_hrw1text.write(
+            '''
+            Long-duration heavy rainfall (rainfall intensity of 7.5-15 mm/h) ongoing or likely to occur within 2-3 hours
+            - Flooding is possible in areas that are urbanized, low-lying, and/or near rivers or streams
+            - Landslides are possible in hilly or mountainous areas
+            ''')
+
+        legend_rain_content_hrw2 = legend_rain_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_rain_content_hrw2icon = legend_rain_content_hrw2.container(width=100)
+        legend_rain_content_hrw2icon.image('static/rainwarning_03_orangehrwl.png')
+
+        legend_rain_content_hrw2text = legend_rain_content_hrw2.container()
+        legend_rain_content_hrw2text.write('***Orange Warning Level***')
+        legend_rain_content_hrw2text.write(
+            '''
+            Long-duration intense rainfall (rainfall intensity of 15-30 mm/h, or 3-hour rainfall accumulation of 45-65 mm) ongoing or likely to occur within 2-3 hours
+            - Flooding is threatening, or serious flooding is about to occur, in areas that are urbanized, low-lying, and/or near rivers or streams
+            - Landslides are likely in hilly or mountainous areas
+            ''')
+
+        legend_rain_content_hrw3 = legend_rain_content.container(horizontal=True, horizontal_alignment='left',
+                                                                    vertical_alignment = 'center')
+
+        legend_rain_content_hrw3icon = legend_rain_content_hrw3.container(width=100)
+        legend_rain_content_hrw3icon.image('static/rainwarning_04_redhrwl.png')
+
+        legend_rain_content_hrw3text = legend_rain_content_hrw3.container()
+        legend_rain_content_hrw3text.write('***Red Warning Level***')
+        legend_rain_content_hrw3text.write(
+            '''
+            Long-duration torrential rainfall (rainfall intensity more than 30 mm/h, or 3-hour rainfall accumulation more than 65 mm) ongoing or likely to occur within 2-3 hours
+            - Serious flooding is expected or ongoing in areas that are urbanized, low-lying, and/or near rivers or streams
+            - Landslides are highly likely in hilly or mountainous areas
             ''')
 
     with col2:
