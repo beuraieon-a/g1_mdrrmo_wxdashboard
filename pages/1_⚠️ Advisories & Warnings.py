@@ -281,7 +281,7 @@ with weather_tab:
         legend_tstm_content_icon = legend_tstm_content.container(width=100)
         legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
-        legend_tstm_content_text = legend_tstm_content.container()
+        legend_tstm_content_text = legend_tstm_content.container(vertical_alignment = 'center')
         legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
 
     with col2:
@@ -292,7 +292,7 @@ with weather_tab:
         legend_tcws_content_icon = legend_tcws_content.container(width=100)
         legend_tcws_content_icon.image('static/tcws1.png')
 
-        legend_tcws_content_text = legend_tcws_content.container()
+        legend_tcws_content_text = legend_tcws_content.container(vertical_alignment = 'center')
         legend_tcws_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
 
 with climate_tab:
