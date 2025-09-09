@@ -274,23 +274,23 @@ with weather_tab:
     col1, col2 = st.columns(2)
 
     with col1:
-        legend_tstm = st.container(horizontal=True, horizontal_alignment='left')
         legend_tstm.write('##### Thunderstorm')
+        legend_tstm = st.container(horizontal=True, horizontal_alignment='left', width = 600)
         legend_tstm_content = legend_tstm.container(border=True)
 
-        legend_tstm_content_icon = legend_tstm_content.container(width=200)
+        legend_tstm_content_icon = legend_tstm_content.container(width=100)
         legend_tstm_content_icon.image('static/rainwarning_00_tstmadv.png')
 
         legend_tstm_content_text = legend_tstm_content.container()
         legend_tstm_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
 
     with col2:
-        legend_tcws = st.container(horizontal=True, horizontal_alignment='left')
         legend_tcws.write('##### Tropical cyclone winds')
+        legend_tcws = st.container(horizontal=True, horizontal_alignment='left', width = 600)
         legend_tcws_content = legend_tcws.container(border=True)
 
-        legend_tcws_content_icon = legend_tcws_content.container(width=200)
-        legend_tcws_content_icon.image('static/rainwarning_00_tstmadv.png')
+        legend_tcws_content_icon = legend_tcws_content.container(width=100)
+        legend_tcws_content_icon.image('static/tcws1.png')
 
         legend_tcws_content_text = legend_tcws_content.container()
         legend_tcws_content_text.write('Moderate to heavy rainshowers with possible isolated intense downpours, accompanied with lightning and strong winds, are ongoing or likely to occur within 1-2 hours.')
