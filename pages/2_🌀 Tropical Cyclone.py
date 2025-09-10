@@ -117,7 +117,7 @@ with activetc_tab:
     hazard_rainfall_content.write(
         '''
         - Heavy to intense with at times torrential rains are likely this afternoon through tomorrow early morning. Widespread incidents of severe flooding and landslides may occur, threatening lives and property.
-        - Thereafter, the rains will gradually decrease in intensity. By tomorrow early morning through Sunday morning, light to moderate with at times heavy rains are still likely. The threat of flooding and landslides can still persist by then.
+        - Thereafter, the rains will gradually decrease in intensity as . By tomorrow early morning through Sunday morning, light to moderate with at times heavy rains are still likely. The threat of flooding and landslides can still persist by then.
         '''
     )
 
