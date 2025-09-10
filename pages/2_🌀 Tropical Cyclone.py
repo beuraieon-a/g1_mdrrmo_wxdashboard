@@ -35,6 +35,14 @@ with activetc_tab:
     st.write('##### Actively-monitored tropical cyclones')
 
     st.write('### Tropical Storm “PAENG” (*Nalgae*)')
+    st.write("*based on DOST-PAGASA's Tropical Cyclone Bulletin No. 11, issued at 5:00 PM, 28 October 2022")
+
+    tc_headline = st.container(border=True)
+    tc_headline.write(
+        '''
+        ⚠️ ****Tropical Storm “PAENG” (*Nalgae*) slightly intensifies as it moves west-northwestward towards Northern Samar–Sorsogon–Albay area.****
+        '''
+        )
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
