@@ -40,7 +40,7 @@ with activetc_tab:
     tc_headline = st.container(border=True)
     tc_headline.write(
         '''
-        #### ⚠️ ****Tropical Storm “PAENG” (*Nalgae*) slightly intensifies as it moves west-northwestward towards Northern Samar–Sorsogon–Albay area.****
+        ⚠️ ****Tropical Storm “PAENG” (*Nalgae*) slightly intensifies as it moves west-northwestward towards Northern Samar–Sorsogon–Albay area.****
         '''
         )
     
