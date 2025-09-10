@@ -54,7 +54,25 @@ with activetc_tab:
 
         st.write('##### Location of center')
         center_loc = st.container(border=True)
-        center_loc.write('180 km east of Catarman, Northern Samar (12.4°N, 126.3°E)')
+        center_loc.write('180 kilometers East of Catarman, Northern Samar (near 12.4°N 126.3°E)')
+
+        st.write('##### Intensity')
+        center_loc = st.container(border=True)
+        center_loc.write(
+            '''
+            - 10-min maximum sustained winds near the center: 85 km/h
+            - Gustiness: 105 km/h
+            - Central pressure: 990 hPa
+            '''
+            )
+        
+        st.write('##### Movement')
+        center_loc = st.container(border=True)
+        center_loc.write('West-northwestward at 25 km/h')
+
+        st.write('##### Extent of tropical cyclone wind field')
+        center_loc = st.container(border=True)
+        center_loc.write('Strong to gale-force winds extend outwards up to 480 km from the center')
 
     with tcgraphics:
         st.image('static/sample_tc_sat.gif')
