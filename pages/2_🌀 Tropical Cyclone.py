@@ -99,12 +99,26 @@ with activetc_tab:
     "---"
 
     st.write('#### Tropical cyclone hazards threatening Guiuan, Eastern Samar')
-    st.write('Note: To see all active warnings over Guiuan, go to ****Advisories & Warnings****.')
+    st.write('Note: To see all active warnings over Guiuan, go to ****⚠️ Advisories & Warnings****.')
 
     hazardsrow1 = st.container(horizontal=True, horizontal_alignment='center')
 
     hazard_rainfall = st.container(width=600)
     hazard_rainfall.write('##### Rainfall')
+
+    hazard_rainfall_content = hazard_rainfall.container(horizontal_alignment='center', border=True)
+
+    hazard_rainfall_icons = hazard_rainfall_content.container(horizontal=True)
+    hrw_icon = hazard_rainfall_icons.container(width=150)
+    hrw.image('static/rainwarning_04_redhrwl.png')
+    wahr_icon = hazard_rainfall_icons.container(width=150)
+    wahr.image('static/hvyrainoutlook3.png')
+
+    hazard_rainfall_content.write(
+        '''
+        - Heavy to intense with at times torrential rains are likely this afternoon through tomorrow early morning, then gradually decreasing onwards. Tomorrow early morning through Sunday morning, light to moderate with at times heavy rains are still likely.
+        '''
+    )
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
