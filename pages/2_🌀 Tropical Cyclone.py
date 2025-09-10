@@ -106,9 +106,9 @@ with activetc_tab:
     hazard_rainfall = st.container(width=600)
     hazard_rainfall.write('##### Rainfall')
 
-    hazard_rainfall_content = hazard_rainfall.container(horizontal_alignment='center', border=True)
+    hazard_rainfall_content = hazard_rainfall.container(border=True)
 
-    hazard_rainfall_icons = hazard_rainfall_content.container(horizontal=True)
+    hazard_rainfall_icons = hazard_rainfall_content.container(horizontal_alignment='center', horizontal=True)
     hrw_icon = hazard_rainfall_icons.container(width=150)
     hrw_icon.image('static/rainwarning_04_redhrwl.png')
     wahr_icon = hazard_rainfall_icons.container(width=150)
