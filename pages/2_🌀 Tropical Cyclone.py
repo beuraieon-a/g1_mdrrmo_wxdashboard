@@ -35,7 +35,7 @@ with activetc_tab:
     st.write('##### Actively-monitored tropical cyclones')
 
     st.write('### Tropical Storm “PAENG” (*Nalgae*)')
-    st.write("*based on DOST-PAGASA's Tropical Cyclone Bulletin No. 11, issued at 5:00 PM, 28 October 2022")
+    st.write("*based on DOST-PAGASA's Tropical Cyclone Bulletin No. 11, issued at 5:00 PM, 28 October 2022*")
 
     tc_headline = st.container(border=True)
     tc_headline.write(
