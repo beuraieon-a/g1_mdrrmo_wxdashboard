@@ -103,7 +103,7 @@ with activetc_tab:
 
     hazardsrow1 = st.container(horizontal=True, horizontal_alignment='center')
 
-    hazard_rainfall = st.container(width=600)
+    hazard_rainfall = hazardsrow1.container(width=600)
     hazard_rainfall.write('##### Rainfall')
 
     hazard_rainfall_content = hazard_rainfall.container(border=True)
@@ -121,12 +121,12 @@ with activetc_tab:
         '''
     )
 
-    hazard_wind = st.container(width=600)
+    hazard_wind = hazardsrow1.container(width=600)
     hazard_wind.write('##### Severe winds')
 
-    hazard_wind_content = hazard_wind.container(border=True)
+    hazard_wind_content = hazard_wind.container(horizontal_alignment='center'border=True)
     
-    tcws_icon = hazard_wind_content.container(horizontal_alignment='center', width=150)
+    tcws_icon = hazard_wind_content.container(width=150)
     tcws_icon.image('static/tcws2.png')
 
     hazard_wind_content.write(
