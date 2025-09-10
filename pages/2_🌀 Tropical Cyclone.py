@@ -44,7 +44,7 @@ with activetc_tab:
         '''
         )
 
-    tcparams, tcgraphics = st.column(2)
+    tcparams, tcgraphics = st.columns(2)
 
     with tcparams:
         st.write('*Tropical cyclone parameters as of 4:00 PM, 28 October 2022*')
