@@ -25,7 +25,7 @@ def show_clock():
 
 show_clock()
 
-st.write('## Tropical Cyclone (TC) Updates')
+st.write('## 🌀 Tropical Cyclone (TC) Updates')
 st.write('Note: ***Actively-monitored TCs*** are those that are being intensively monitored by DOST-PAGASA such that they warrant the issuance of either a Tropical Cyclone Advisory (TCA) or a Tropical Cyclone Bulletin (TCB). Any TCs that are present within the PAGASA Monitoring Domain but are not actively monitored are still shown in the 24-Hour Tropical Cyclone Formation Outlook.')
 
 # Setting tabs for weather-related and climate-related advisories and warnings
@@ -43,6 +43,30 @@ with activetc_tab:
         ⚠️ ****Tropical Storm “PAENG” (*Nalgae*) slightly intensifies as it moves west-northwestward towards Northern Samar–Sorsogon–Albay area.****
         '''
         )
+
+    tcparams, tcgraphics = st.column(2)
+
+    with tcparams:
+        st.write('*Tropical cyclone parameters as of 4:00 PM, 28 October 2022*')
+        
+        df = pd.DataFrame(
+            {
+                "Command": ["**st.table**", "*st.dataframe*"],
+                "Type": ["`static`", "`interactive`"],
+                "Docs": [
+                    "[:rainbow[docs]](https://docs.streamlit.io"
+                    "/develop/api-reference/data/st.dataframe)",
+                    "[:open_book:](https://docs.streamlit.io"
+                    "/develop/api-reference/data/st.table)",
+                ],
+            }
+        )
+
+        st.table(df)
+
+    with tcgraphics:
+        st.image('static/sample_tc_sat.gif')
+        st.image('static/tctrack.png')
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
