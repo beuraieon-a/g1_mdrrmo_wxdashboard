@@ -34,7 +34,7 @@ activetc_tab, fscttc_tab = st.tabs(['Active TCs', 'TC formation & threat potenti
 with activetc_tab:
     st.write('##### Actively-monitored tropical cyclones')
 
-    st.write('## Tropical Storm “PAENG” (*Nalgae*)')
+    st.write('### Tropical Storm “PAENG” (*Nalgae*)')
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
