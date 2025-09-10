@@ -50,22 +50,11 @@ with activetc_tab:
     tcparams, tcgraphics = st.columns(2)
 
     with tcparams:
-        st.write('*Tropical cyclone parameters as of 4:00 PM, 28 October 2022*')
-        
-        df = pd.DataFrame(
-            {
-                "Command": ["**st.table**", "*st.dataframe*"],
-                "Type": ["`static`", "`interactive`"],
-                "Docs": [
-                    "[:rainbow[docs]](https://docs.streamlit.io"
-                    "/develop/api-reference/data/st.dataframe)",
-                    "[:open_book:](https://docs.streamlit.io"
-                    "/develop/api-reference/data/st.table)",
-                ],
-            }
-        )
+        st.write('*Tropical cyclone parameters as of 4:00 PM, 28 October 2022:*')
 
-        st.table(df)
+        st.write('###### Location of center')
+        center_loc = st.container(border=True)
+        center_loc.write.('180 km east of Catarman, Northern Samar (12.4°N, 126.3°E)')
 
     with tcgraphics:
         st.image('static/sample_tc_sat.gif')
