@@ -35,7 +35,7 @@ with activetc_tab:
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
-    st.write('****as of 8:00 AM 10 September 2025')
+    st.write('****as of 8:00 AM 10 September 2025****')
 
     st.image('static/24h_tc_formation_outlook.jpg')
 
