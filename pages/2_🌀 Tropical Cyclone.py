@@ -110,9 +110,9 @@ with activetc_tab:
 
     hazard_rainfall_icons = hazard_rainfall_content.container(horizontal=True)
     hrw_icon = hazard_rainfall_icons.container(width=150)
-    hrw.image('static/rainwarning_04_redhrwl.png')
+    hrw_icon.image('static/rainwarning_04_redhrwl.png')
     wahr_icon = hazard_rainfall_icons.container(width=150)
-    wahr.image('static/hvyrainoutlook3.png')
+    wahr_icon.image('static/hvyrainoutlook3.png')
 
     hazard_rainfall_content.write(
         '''
