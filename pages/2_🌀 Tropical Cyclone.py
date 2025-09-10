@@ -58,7 +58,8 @@ with activetc_tab:
     tcparams, fcstlocs = st.columns(2)
 
     with tcparams:
-        st.write('*Tropical cyclone parameters as of 4:00 PM, 28 October 2022:*')
+        st.write('#### Current tropical cyclone parameters')
+        st.write('*as of 4:00 PM, 28 October 2022:*')
 
         st.write('##### Location of center')
         center_loc = st.container(border=True)
