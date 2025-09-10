@@ -55,6 +55,8 @@ with activetc_tab:
     with tctrack:
         st.image('static/tctrack.png')
 
+    "---"
+
     tcparams, fcstlocs = st.columns(2)
 
     with tcparams:
@@ -87,6 +89,8 @@ with activetc_tab:
         st.write('#### Track and intensity forecast')
         forecast_locations = st.container(border=True)
         forecast_locations.image('static/tc_fcst_locations.png')
+    
+    "---"
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
