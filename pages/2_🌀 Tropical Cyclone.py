@@ -124,7 +124,7 @@ with activetc_tab:
     hazard_wind = hazardsrow1.container(width=600)
     hazard_wind.write('##### Severe winds')
 
-    hazard_wind_content = hazard_wind.container(horizontal_alignment='center'border=True)
+    hazard_wind_content = hazard_wind.container(horizontal_alignment='center', border=True)
     
     tcws_icon = hazard_wind_content.container(width=150)
     tcws_icon.image('static/tcws2.png')
