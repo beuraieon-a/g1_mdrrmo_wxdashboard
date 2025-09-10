@@ -26,12 +26,13 @@ def show_clock():
 show_clock()
 
 st.write('## Tropical Cyclone (TC) Updates')
+st.write('Note: ***Actively-monitored TCs*** are those that are being intensively monitored by DOST-PAGASA such that they warrant the issuance of either a Tropical Cyclone Advisory (TCA) or a Tropical Cyclone Bulletin (TCB). Any TCs that are present within the PAGASA Monitoring Domain but are not actively monitored are shown in the 24-Hour Tropical Cyclone Formation Outlook.')
 
 # Setting tabs for weather-related and climate-related advisories and warnings
 activetc_tab, fscttc_tab = st.tabs(['Active TCs', 'TC formation & threat potential'])
 
 with activetc_tab:
-    st.write('### Active tropical cyclones')
+    st.write('### Actively-monitored tropical cyclones')
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
