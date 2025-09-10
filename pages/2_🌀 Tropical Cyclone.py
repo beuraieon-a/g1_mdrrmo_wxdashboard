@@ -38,8 +38,14 @@ with activetc_tab:
     st.write('### Tropical Storm “PAENG” (*Nalgae*)')
     st.write("*based on DOST-PAGASA's Tropical Cyclone Bulletin No. 11, issued at 5:00 PM, 28 October 2022*")
 
-    tc_headline = st.container(border=True)
-    tc_headline.write(
+    tc_headline = st.container(border=True, horizontal=True,
+                               horizontal_alignment='center', vertical_alignment = 'center')
+
+    tc_icon = tc_headline.container(width=70)
+    tc_icon.image('static/TCcat_02_TS.png')
+
+    tc_headline_text = tc_headline.container()
+    tc_headline_text.write(
         '''
         ⚠️ ****Tropical Storm “PAENG” (*Nalgae*) slightly intensifies as it moves west-northwestward towards Northern Samar–Sorsogon–Albay area.****
         - Guiuan, Eastern Samar is currently under ****Tropical Cyclone Wind Signal No. 2**** due to “PAENG”. Gale-force to severe gale-force winds are prevailing or expected, posing minor to moderate threat to life and property.
@@ -91,6 +97,14 @@ with activetc_tab:
         forecast_locations.image('static/tc_fcst_locations.png')
     
     "---"
+
+    st.write('#### Tropical cyclone hazards threatening Guiuan, Eastern Samar')
+    st.write('Note: To see all active warnings over Guiuan, go to ****Advisories & Warnings****.')
+
+    hazardsrow1 = st.container(horizontal=True, horizontal_alignment='center')
+
+    hazard_rainfall = st.container(width=600)
+    hazard_rainfall.write('##### Rainfall')
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
