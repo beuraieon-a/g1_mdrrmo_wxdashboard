@@ -39,7 +39,7 @@ with fscttc_tab:
 
     st.image('static/24h_tc_formation_outlook.jpg')
 
-
-
-
     st.write('### Tropical cyclone threat potential forecast')
+    st.write('****as of 10 September 2025****')
+
+    st.image('static/tcthreatpotentialfcst.png')
