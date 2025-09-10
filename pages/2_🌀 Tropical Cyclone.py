@@ -116,7 +116,27 @@ with activetc_tab:
 
     hazard_rainfall_content.write(
         '''
-        - Heavy to intense with at times torrential rains are likely this afternoon through tomorrow early morning, then gradually decreasing onwards. Tomorrow early morning through Sunday morning, light to moderate with at times heavy rains are still likely.
+        - Heavy to intense with at times torrential rains are likely this afternoon through tomorrow early morning. Widespread incidents of severe flooding and landslides may occur, threatening lives and property.
+        - Thereafter, the rains will gradually decrease in intensity. By tomorrow early morning through Sunday morning, light to moderate with at times heavy rains are still likely. The threat of flooding and landslides can still persist by then.
+        '''
+    )
+
+    hazard_wind = st.container(width=600)
+    hazard_wind.write('##### Severe winds')
+
+    hazard_wind_content = hazard_wind.container(border=True)
+    
+    tcws_icon = hazard_wind_content.container(horizontal_alignment='center', width=150)
+    tcws_icon.image('static/tcws2.png')
+
+    hazard_wind_content.write(
+        '''
+        Gale-force to severe gale-force winds are prevailing or expected to occur, posing minor to moderate threat to life and property such as (but not limited to):
+        - Minor to moderate damage may occur to makeshift or old dilapidated structures, and other structures made of light materials. Houses of poor and average construction (e.g., unreinforced CHB/masonry, mixed timber-CHB) may receive minor roof damage.
+        - Unsecured, exposed lightweight items may become projectiles which may cause additional damage.
+        - Some electrical wires may be blown down, resulting in local power outages.
+        - Minor to moderate disruption to public transportation.
+        - Most banana and similar plants are tilted, with some stooped or downed. Some small trees blow over, with twigs and branches of frail trees broken. Considerable damage is likely to rice and other similar crops, especially those in flowering and ripening stages
         '''
     )
     
