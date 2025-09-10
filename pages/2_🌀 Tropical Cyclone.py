@@ -52,9 +52,9 @@ with activetc_tab:
     with tcparams:
         st.write('*Tropical cyclone parameters as of 4:00 PM, 28 October 2022:*')
 
-        st.write('###### Location of center')
+        st.write('##### Location of center')
         center_loc = st.container(border=True)
-        # center_loc.write.('180 km east of Catarman, Northern Samar (12.4°N, 126.3°E)')
+        center_loc.write('180 km east of Catarman, Northern Samar (12.4°N, 126.3°E)')
 
     with tcgraphics:
         st.image('static/sample_tc_sat.gif')
