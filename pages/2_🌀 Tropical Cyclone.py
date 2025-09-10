@@ -43,7 +43,7 @@ with activetc_tab:
         '''
         ⚠️ ****Tropical Storm “PAENG” (*Nalgae*) slightly intensifies as it moves west-northwestward towards Northern Samar–Sorsogon–Albay area.****
         - Guiuan, Eastern Samar is currently under ****Tropical Cyclone Wind Signal No. 2**** due to “PAENG”. Gale-force to severe gale-force winds are prevailing or expected, posing minor to moderate threat to life and property.
-        - Due to “PAENG”, Guiuan is also currently under ****Orange Heavy Rainfall Warning Level**** for the threat of long-duration intense rains and ****Gale Warning**** for rough to very rough seas that are hazardous to various vessels.
+        - Due to “PAENG”, Guiuan is also currently under ****Orange Heavy Rainfall Warning Level**** for the threat of long-duration intense rains that can trigger threatening floods and landslides and ****Gale Warning**** for rough to very rough seas that are hazardous to various vessels.
         '''
         )
 
