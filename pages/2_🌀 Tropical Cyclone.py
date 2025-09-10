@@ -47,36 +47,45 @@ with activetc_tab:
         '''
         )
 
-    tcparams, tcgraphics = st.columns(2)
+    satimg, tctrack = st.columns(2)
+
+    with satimg:
+        st.image('static/sample_tc_sat.gif')
+    
+    with tctrack:
+        st.image('static/tctrack.png')
+
+    tcparams, fcstlocs = st.columns(2)
 
     with tcparams:
         st.write('*Tropical cyclone parameters as of 4:00 PM, 28 October 2022:*')
 
         st.write('##### Location of center')
         center_loc = st.container(border=True)
-        center_loc.write('180 kilometers East of Catarman, Northern Samar (near 12.4°N 126.3°E)')
+        center_loc.write('**180 kilometers East of Catarman, Northern Samar** (near 12.4°N 126.3°E)')
 
         st.write('##### Intensity')
         center_loc = st.container(border=True)
         center_loc.write(
             '''
-            - 10-min maximum sustained winds near the center: 85 km/h
-            - Gustiness: 105 km/h
-            - Central pressure: 990 hPa
+            - 10-min maximum sustained winds near the center: **85 km/h**
+            - Gustiness: **105 km/h**
+            - Central pressure: **990 hPa**
             '''
             )
         
         st.write('##### Movement')
         center_loc = st.container(border=True)
-        center_loc.write('West-northwestward at 25 km/h')
+        center_loc.write('**West-northwestward** at **25 km/h**')
 
         st.write('##### Extent of tropical cyclone wind field')
         center_loc = st.container(border=True)
-        center_loc.write('Strong to gale-force winds extend outwards up to 480 km from the center')
+        center_loc.write('Strong to gale-force winds extend outwards up to **480 km from the center**')
 
-    with tcgraphics:
-        st.image('static/sample_tc_sat.gif')
-        st.image('static/tctrack.png')
+    with fcstlocs:
+        st.write('#### Track and intensity forecast')
+        forecast_locations = st.container(border=True)
+        forecast_locations.image('static/tc_fcst_locations.png')
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
