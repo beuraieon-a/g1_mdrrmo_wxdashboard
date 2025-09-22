@@ -101,44 +101,48 @@ with activetc_tab:
     st.write('#### Tropical cyclone hazards threatening Guiuan, Eastern Samar')
     st.write('Note: To see all active warnings over Guiuan, go to ****⚠️ Advisories & Warnings****.')
 
-    hazardsrow1 = st.container(horizontal=True, horizontal_alignment='center')
+    hazardcol1, hazardcol2 = st.columns(2)
 
-    hazard_rainfall = hazardsrow1.container(width=600)
-    hazard_rainfall.write('##### Rainfall')
+    with hazardcol1:
 
-    hazard_rainfall_content = hazard_rainfall.container(border=True)
+        hazard_rainfall = st.container(width=600)
+        hazard_rainfall.write('##### Rainfall')
 
-    hazard_rainfall_icons = hazard_rainfall_content.container(horizontal_alignment='center', horizontal=True)
-    hrw_icon = hazard_rainfall_icons.container(width=150)
-    hrw_icon.image('static/rainwarning_04_redhrwl.png')
-    wahr_icon = hazard_rainfall_icons.container(width=150)
-    wahr_icon.image('static/hvyrainoutlook3.png')
+        hazard_rainfall_content = hazard_rainfall.container(border=True)
 
-    hazard_rainfall_content.write(
-        '''
-        - Heavy to intense with at times torrential rains are likely this afternoon through tomorrow early morning. Widespread incidents of severe flooding and landslides may occur, threatening lives and property.
-        - Thereafter, the rains will gradually decrease in intensity as “PAENG” tracks further away from Guiuan. By tomorrow early morning through Sunday morning, light to moderate with at times heavy rains are still likely. The threat of flooding and landslides can still persist by then.
-        '''
-    )
+        hazard_rainfall_icons = hazard_rainfall_content.container(horizontal_alignment='center', horizontal=True)
+        hrw_icon = hazard_rainfall_icons.container(width=150)
+        hrw_icon.image('static/rainwarning_04_redhrwl.png')
+        wahr_icon = hazard_rainfall_icons.container(width=150)
+        wahr_icon.image('static/hvyrainoutlook3.png')
 
-    hazard_wind = hazardsrow1.container(width=600)
-    hazard_wind.write('##### Severe winds')
+        hazard_rainfall_content.write(
+            '''
+            - Heavy to intense with at times torrential rains are likely this afternoon through tomorrow early morning. Widespread incidents of severe flooding and landslides may occur, threatening lives and property.
+            - Thereafter, the rains will gradually decrease in intensity as “PAENG” tracks further away from Guiuan. By tomorrow early morning through Sunday morning, light to moderate with at times heavy rains are still likely. The threat of flooding and landslides can still persist by then.
+            '''
+        )
 
-    hazard_wind_content = hazard_wind.container(horizontal_alignment='center', border=True)
-    
-    tcws_icon = hazard_wind_content.container(width=150)
-    tcws_icon.image('static/tcws2.png')
+    with hazardcol2:
 
-    hazard_wind_content.write(
-        '''
-        Gale-force to severe gale-force winds are prevailing or expected to occur, posing minor to moderate threat to life and property such as (but not limited to):
-        - Minor to moderate damage may occur to makeshift or old dilapidated structures, and other structures made of light materials. Houses of poor and average construction (e.g., unreinforced CHB/masonry, mixed timber-CHB) may receive minor roof damage.
-        - Unsecured, exposed lightweight items may become projectiles which may cause additional damage.
-        - Some electrical wires may be blown down, resulting in local power outages.
-        - Minor to moderate disruption to public transportation.
-        - Most banana and similar plants are tilted, with some stooped or downed. Some small trees blow over, with twigs and branches of frail trees broken. Considerable damage is likely to rice and other similar crops, especially those in flowering and ripening stages
-        '''
-    )
+        hazard_wind = hazardsrow1.container(width=600)
+        hazard_wind.write('##### Severe winds')
+
+        hazard_wind_content = hazard_wind.container(horizontal_alignment='center', border=True)
+        
+        tcws_icon = hazard_wind_content.container(width=150)
+        tcws_icon.image('static/tcws2.png')
+
+        hazard_wind_content.write(
+            '''
+            Gale-force to severe gale-force winds are prevailing or expected to occur, posing minor to moderate threat to life and property such as (but not limited to):
+            - Minor to moderate damage may occur to makeshift or old dilapidated structures, and other structures made of light materials. Houses of poor and average construction (e.g., unreinforced CHB/masonry, mixed timber-CHB) may receive minor roof damage.
+            - Unsecured, exposed lightweight items may become projectiles which may cause additional damage.
+            - Some electrical wires may be blown down, resulting in local power outages.
+            - Minor to moderate disruption to public transportation.
+            - Most banana and similar plants are tilted, with some stooped or downed. Some small trees blow over, with twigs and branches of frail trees broken. Considerable damage is likely to rice and other similar crops, especially those in flowering and ripening stages
+            '''
+        )
     
 with fscttc_tab:
     st.write('### 24-hour tropical cyclone formation outlook')
